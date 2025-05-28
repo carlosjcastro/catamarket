@@ -4,7 +4,7 @@ const servicios = [
     tipo: "servicio",
     titulo: "Sesión de masajes relajantes",
     precio: 5000,
-    precioOferta: 4000,
+    precioOferta: 3000,
     descripcion:
       "Terapia manual para reducir el estrés y mejorar el bienestar.",
     imagen: "/img/servicios/spa.webp",
@@ -21,7 +21,7 @@ const servicios = [
     tipo: "servicio",
     titulo: "Clases de yoga al aire libre",
     precio: 4000,
-    precioOferta: 1200,
+    precioOferta: 2400,
     descripcion:
       "Sesiones de yoga en la naturaleza para conectar cuerpo y mente.",
     imagen: "/img/servicios/yoga.jpg",
@@ -38,7 +38,7 @@ const servicios = [
     tipo: "servicio",
     titulo: "Asesoría contable para emprendedores",
     precio: 8000,
-    precioOferta: 1200,
+    precioOferta: 4800,
     descripcion: "Servicio profesional para organizar tus finanzas y trámites.",
     imagen: "/img/servicios/asesoriacontable.webp",
     caracteristicas: [
