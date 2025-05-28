@@ -1,0 +1,224 @@
+/* General */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/*Solicitud*/
+.emprendedores {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.Solicitud-publicacion {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.Solicitud-publicacion h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #c96c3a;
+}
+.Solicitud-publicacion p {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.boton-solicitud {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #7e8d48;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.boton-solicitud:hover {
+  background-color: #657a3b;
+}
+.titulo-prod-serv {
+  font-size: 25px;
+  font-weight: bold;
+  color: #c96c3a;
+}
+
+/*Productos / Servicios*/
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.producto {
+  background-color: #fff3e4;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+.producto img {
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.producto h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #c96c3a;
+}
+.producto p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+.producto span {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+}
+.divisor {
+  border: 0;
+  border-top: 1px solid #e0cfc0;
+  margin: 20px 0;
+}
+.producto i {
+  color: #000000;
+  font-size: 18px;
+  margin-right: 8px;
+}
+.producto i:hover {
+  color: #c96c3a;
+  text-decoration: none;
+}
+.precio-boton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+.precio {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+  margin: 0;
+}
+.btn-verde {
+  background-color: #7e8d48;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.btn-verde:hover {
+  background-color: #657a3b;
+}
+
+.formulario-publicacion {
+  background-color: #fff3e4;
+  border-radius: 16px;
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-publicacion h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #c96c3a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.formulario-publicacion form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-publicacion label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.formulario-publicacion input,
+.formulario-publicacion textarea {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.formulario-publicacion textarea {
+  resize: vertical;
+}
+
+.formulario-publicacion small {
+  font-size: 13px;
+  color: #666;
+  margin-top: -10px;
+}
+
+.formulario-publicacion .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.formulario-publicacion button {
+  background-color: #7e8d48;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-publicacion button:hover {
+  background-color: #657a3b;
+}
+
+/*Adaptado a diferentes pantallas*/
+@media (max-width: 992px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+  .producto img {
+    width: 100%;
+  }
+  .Solicitud-publicacion h1 {
+    font-size: 30px;
+  }
+  .Solicitud-publicacion p {
+    font-size: 18px;
+  }
+
+  .formulario-publicacion {
+    padding: 20px 10px;
+    margin: 20px;
+  }
+}

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es" x-data="{ open: false }" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos | Catamarket</title>
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="/styles/emprendedores-cards.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-poppins">
+    <!-- Header y Menú -->
+    <header class="bg-[#FFF3E4] shadow sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="../index.html">
+              <img
+                src="/img/logo/Catamarket_Logo_2.png"
+                alt="Logo de Catamarket"
+                class="h-16 w-auto"
+            /></a>
+          </div>
+
+          <!-- Menú hamburguesa -->
+          <div class="md:hidden">
+            <button
+              @click="open = !open"
+              class="text-gray-700 hover:text-blue-600"
+            >
+              <iconify-icon icon="heroicons:bars-3" width="24"></iconify-icon>
+            </button>
+          </div>
+
+          <!-- Menú para escritorio -->
+          <nav class="hidden md:flex space-x-6 items-center">
+            <!-- Menú principal con submenús -->
+            <div x-data="{ open: false }" class="relative">
+              <button
+                @click="open = !open"
+                class="flex items-center space-x-1 hover:text-[#C96C3A] hover:underline"
+              >
+                <iconify-icon
+                  icon="heroicons:cursor-arrow-rays"
+                  width="20"
+                ></iconify-icon>
+                <span>Explorar Productos</span>
+                <iconify-icon
+                  icon="heroicons:chevron-down"
+                  width="16"
+                ></iconify-icon>
+              </button>
+              <div
+                x-show="open"
+                @click.away="open = false"
+                class="absolute z-10 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-2xl"
+              >
+                <!-- Artesanías -->
+                <a
+                  href="/pages/productos.html?categoria=artesanias"
+                  class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2"
+                >
+                  <iconify-icon
+                    icon="heroicons:sparkles"
+                    width="18"
+                  ></iconify-icon>
+                  <span>Artesanías</span>
+                </a>
+
+                <!-- Gastronomía -->
+                <a
+                  href="/pages/productos.html?categoria=gastronomia"
+                  class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2"
+                >
+                  <iconify-icon icon="heroicons:fire" width="18"></iconify-icon
+                  ><span>Gastronomía</span>
+                </a>
+
+                <!-- Indumentaria -->
+                <a
+                  href="/pages/productos.html?categoria=indumentaria"
+                  class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2"
+                >
+                  <iconify-icon
+                    icon="heroicons:shopping-bag"
+                    width="18"
+                  ></iconify-icon
+                  ><span>Indumentaria</span>
+                </a>
+
+                <!-- Decoración -->
+                <a
+                  href="/pages/productos.html?categoria=decoracion"
+                  class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2"
+                >
+                  <iconify-icon
+                    icon="heroicons:home-modern"
+                    width="18"
+                  ></iconify-icon
+                  ><span>Decoración</span>
+                </a>
+
+                <!-- Servicios -->
+                <a
+                  href="/pages/servicios.html?categoria=servicios"
+                  class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 rounded-b-2xl"
+                >
+                  <iconify-icon
+                    icon="heroicons:wrench-screwdriver"
+                    width="18"
+                  ></iconify-icon
+                  ><span>Servicios</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Ofertas -->
+            <a
+              href="#"
+              class="flex items-center space-x-1 hover:text-[#C96C3A] hover:underline"
+            >
+              <iconify-icon icon="heroicons:tag" width="20"></iconify-icon
+              ><span>Ofertas</span>
+            </a>
+
+            <!-- Emprendedores -->
+            <a
+              href="/pages/emprendedores.html"
+              class="flex items-center space-x-1 hover:text-[#C96C3A] hover:underline"
+            >
+              <iconify-icon icon="heroicons:briefcase" width="20"></iconify-icon
+              ><span>Emprendedores</span>
+            </a>
+
+            <!-- Favoritos -->
+            <a
+              href="#"
+              class="flex items-center space-x-1 hover:text-[#C96C3A] hover:underline"
+            >
+              <iconify-icon icon="heroicons:heart" width="20"></iconify-icon
+              ><span>Favoritos</span>
+            </a>
+
+            <!-- Contacto -->
+            <a
+              href="/pages/contacto.html"
+              class="flex items-center space-x-1 hover:text-[#C96C3A] hover:underline"
+            >
+              <iconify-icon icon="heroicons:envelope" width="20"></iconify-icon
+              ><span>Contacto</span>
+            </a>
+
+            <!-- Ayuda -->
+            <div x-data="{ open: false }" class="relative">
+              <button
+                @click="open = !open"
+                class="flex items-center space-x-1 hover:text-[#C96C3A] hover:underline"
+              >
+                <iconify-icon
+                  icon="heroicons:question-mark-circle"
+                  width="20"
+                ></iconify-icon>
+                <span>Ayuda</span>
+                <iconify-icon
+                  icon="heroicons:chevron-down"
+                  width="16"
+                ></iconify-icon>
+              </button>
+              <div
+                x-show="open"
+                @click.away="open = false"
+                class="absolute z-10 mt-2 w-56 bg-white border border-gray-200 shadow-lg rounded-2xl"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 rounded-t-2xl"
+                >
+                  <iconify-icon
+                    icon="heroicons:chat-bubble-left-right"
+                    width="18"
+                  ></iconify-icon
+                  ><span>Preguntas Frecuentes</span>
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-100 flex items-center space-x-2 rounded-b-2xl"
+                >
+                  <iconify-icon
+                    icon="heroicons:document-text"
+                    width="18"
+                  ></iconify-icon
+                  ><span>Términos y Condiciones</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Publicar -->
+            <a
+              href="/pages/solicitar-publicacion.html"
+              class="flex items-center space-x-1 text-white bg-[#7e8d48] hover:bg-[#657a3b] font-semibold py-2 px-4 rounded-xl transition"
+            >
+              <iconify-icon
+                icon="heroicons:plus-circle"
+                width="20"
+              ></iconify-icon>
+              <span>Publicar</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        x-show="open"
+        class="md:hidden px-4 pt-4 pb-6 space-y-4 bg-white shadow"
+      >
+        <!-- Submenús móviles -->
+        <div x-data="{ open: false }">
+          <button
+            @click="open = !open"
+            class="w-full text-left flex items-center space-x-2"
+          >
+            <iconify-icon
+              icon="heroicons:cursor-arrow-rays"
+              width="20"
+            ></iconify-icon
+            ><span>Explorar Productos</span>
+            <iconify-icon
+              icon="heroicons:chevron-down"
+              width="16"
+            ></iconify-icon>
+          </button>
+          <div x-show="open" class="ml-4 mt-2 space-y-2">
+            <a
+              href="/pages/productos.html?categoria=artesanias"
+              class="block hover:text-[#C96C3A] hover:underline"
+              >Artesanías</a
+            >
+            <a
+              href="/pages/productos.html?categoria=gastronomia"
+              class="block hover:text-[#C96C3A] hover:underline"
+              >Gastronomía</a
+            >
+            <a
+              href="/pages/productos.html?categoria=indumentaria"
+              class="block hover:text-[#C96C3A] hover:underline"
+              >Indumentaria</a
+            >
+            <a
+              href="/pages/productos.html?categoria=decoracion"
+              class="block hover:text-[#C96C3A] hover:underline"
+              >Decoración</a
+            >
+            <a
+              href="/pages/servicios.html?categoria=servicios"
+              class="block hover:text-[#C96C3A] hover:underline"
+              >Servicios</a
+            >
+          </div>
+        </div>
+        <a
+          href="#"
+          class="block flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+        >
+          <iconify-icon icon="heroicons:tag" width="20"></iconify-icon
+          ><span>Ofertas</span>
+        </a>
+        <a
+          href="/pages/emprendedores.html"
+          class="block flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+        >
+          <iconify-icon icon="heroicons:briefcase" width="20"></iconify-icon
+          ><span>Emprendedores</span>
+        </a>
+        <a
+          href="#"
+          class="block flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+        >
+          <iconify-icon icon="heroicons:heart" width="20"></iconify-icon
+          ><span>Favoritos</span>
+        </a>
+
+        <a
+          href="/pages/contacto.html"
+          class="block flex items-center space-x-2"
+        >
+          <iconify-icon icon="heroicons:envelope" width="20"></iconify-icon
+          ><span>Contacto</span>
+        </a>
+
+        <div x-data="{ open: false }">
+          <button
+            @click="open = !open"
+            class="w-full text-left flex items-center space-x-2"
+          >
+            <iconify-icon
+              icon="heroicons:question-mark-circle"
+              width="20"
+            ></iconify-icon
+            ><span>Ayuda</span>
+          </button>
+          <div x-show="open" class="ml-4 mt-2 space-y-2">
+            <a href="#" class="block">Preguntas Frecuentes</a>
+            <a href="#" class="block">Términos y Condiciones</a>
+          </div>
+        </div>
+
+        <!-- Publicar -->
+        <a
+          href="/pages/solicitar-publicacion.html"
+          class="block flex items-center space-x-2 text-white bg-[#7e8d48] hover:bg-[#657a3b] font-semibold py-2 px-4 rounded-xl transition"
+        >
+          <iconify-icon icon="heroicons:plus-circle" width="20"></iconify-icon>
+          <span>Publicar</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Principal -->
+    <main id="main-productos" class="max-w-7xl mx-auto p-6">
+      <div id="productos" class="productos-container"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-[#FFF3E4] text-gray-800 py-10 mt-12 border-t border-gray-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"
+      >
+        <!-- Logo y Descripción -->
+        <div>
+          <img
+            src="/img/logo/Catamarket_Logo_2.png"
+            alt="Logo Catamarket"
+            class="h-16 w-auto mb-4"
+          />
+          <p class="text-sm text-gray-600">
+            Catamarket – Conectando talento local con vos.
+          </p>
+        </div>
+
+        <!-- Sección: Productos -->
+        <div>
+          <h3 class="text-base font-semibold mb-2 flex items-center space-x-2">
+            <span>Explorar Productos</span>
+          </h3>
+          <ul class="space-y-1 text-sm">
+            <li>
+              <a
+                href="/pages/productos.html?categoria=artesanias"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon
+                  icon="heroicons:sparkles"
+                  width="16"
+                ></iconify-icon
+                ><span>Artesanías</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/productos.html?categoria=gastronomia"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon icon="heroicons:fire" width="16"></iconify-icon
+                ><span>Gastronomía</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/productos.html?categoria=indumentaria"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon
+                  icon="heroicons:shopping-bag"
+                  width="16"
+                ></iconify-icon
+                ><span>Indumentaria</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/productos.html?categoria=decoracion"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon
+                  icon="heroicons:home-modern"
+                  width="16"
+                ></iconify-icon
+                ><span>Decoración</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/servicios.html?categoria=servicios"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon
+                  icon="heroicons:wrench-screwdriver"
+                  width="16"
+                ></iconify-icon
+                ><span>Servicios</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sección: Navegación -->
+        <div>
+          <h3 class="text-base font-semibold mb-2 flex items-center space-x-2">
+            <span>Navegación</span>
+          </h3>
+          <ul class="space-y-1 text-sm">
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon icon="heroicons:tag" width="16"></iconify-icon
+                ><span>Ofertas</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/emprendedores.html"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon
+                  icon="heroicons:briefcase"
+                  width="16"
+                ></iconify-icon
+                ><span>Emprendedores</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon icon="heroicons:heart" width="16"></iconify-icon
+                ><span>Favoritos</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="/pages/contacto.html"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon
+                  icon="heroicons:envelope"
+                  width="16"
+                ></iconify-icon
+                ><span>Contacto</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sección: Ayuda y redes -->
+        <div>
+          <h3 class="text-base font-semibold mb-2 flex items-center space-x-2">
+            <span>Ayuda</span>
+          </h3>
+          <ul class="space-y-1 text-sm mb-4">
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon
+                  icon="heroicons:chat-bubble-left-right"
+                  width="16"
+                ></iconify-icon
+                ><span>Preguntas Frecuentes</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+                ><iconify-icon
+                  icon="heroicons:document-text"
+                  width="16"
+                ></iconify-icon
+                ><span>Términos y Condiciones</span></a
+              >
+            </li>
+          </ul>
+
+          <div class="flex space-x-4">
+            <a
+              href="mailto:proyectocatamarket@gmail.com"
+              class="hover:text-[#C96C3A] hover:underline"
+            >
+              <iconify-icon icon="heroicons:envelope" width="20"></iconify-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Inferior -->
+      <div
+        class="mt-8 border-t border-gray-300 pt-4 text-center text-xs text-gray-500"
+      >
+        &copy; 2025 Catamarket. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/data/productos.js" defer></script>
+    <script src="/data/emprendedores.js" defer></script>
+    <script src="/data/render-productos.js"></script>
+  </body>
+</html>
