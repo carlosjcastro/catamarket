@@ -48,7 +48,7 @@
           <div class="md:hidden">
             <button
               @click="open = !open"
-              class="text-gray-700 hover:text-blue-600"
+              class="text-gray-700 hover:text-[#c96c3a]"
             >
               <iconify-icon icon="heroicons:bars-3" width="24"></iconify-icon>
             </button>
@@ -138,7 +138,7 @@
 
             <!-- Ofertas -->
             <a
-              href="#"
+              href="/pages/ofertas.html"
               class="flex items-center space-x-1 hover:text-[#C96C3A] hover:underline"
             >
               <iconify-icon icon="heroicons:tag" width="20"></iconify-icon
@@ -170,6 +170,18 @@
             >
               <iconify-icon icon="heroicons:envelope" width="20"></iconify-icon
               ><span>Contacto</span>
+            </a>
+
+            <!-- Equipo -->
+            <a
+              href="/pages/equipo.html"
+              class="block flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
+            >
+              <iconify-icon
+                icon="heroicons:user-group"
+                width="20"
+              ></iconify-icon>
+              <span>Equipo</span>
             </a>
 
             <!-- Ayuda -->
@@ -281,7 +293,7 @@
           </div>
         </div>
         <a
-          href="#"
+          href="/pages/ofertas.html"
           class="block flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
         >
           <iconify-icon icon="heroicons:tag" width="20"></iconify-icon
@@ -308,6 +320,11 @@
         >
           <iconify-icon icon="heroicons:envelope" width="20"></iconify-icon
           ><span>Contacto</span>
+        </a>
+
+        <a href="/pages/equipo.html" class="block flex items-center space-x-2">
+          <iconify-icon icon="heroicons:user-group" width="20"></iconify-icon>
+          ><span>Equipo</span>
         </a>
 
         <div x-data="{ open: false }">
@@ -338,6 +355,7 @@
       </div>
     </header>
 
+    <!-- Principal -->
     <main>
       <div class="container mx-auto px-4 py-8">
         <h1 class="text-4xl font-bold mb-8">Catamarket</h1>
@@ -449,7 +467,7 @@
           <ul class="space-y-1 text-sm">
             <li>
               <a
-                href="#"
+                href="/pages/ofertas.html"
                 class="flex items-center space-x-2 hover:text-[#C96C3A] hover:underline"
                 ><iconify-icon icon="heroicons:tag" width="16"></iconify-icon
                 ><span>Ofertas</span></a
