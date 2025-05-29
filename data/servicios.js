@@ -108,7 +108,7 @@ servicios.forEach((item) => {
       <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
       <div class="mt-auto flex items-center justify-between">
       <span class="text-xl font-extrabold text-[#7e8d48]">
-          ${
+        ${
             item.precioOferta
               ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString(
                   "es-AR",

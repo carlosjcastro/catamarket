@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderCards("");
 
-  // Aplicar filtro cuando cambia el select
+  // Se aplica un filtro cuando cambia el select
   filtroTipo.addEventListener("change", (e) => {
     const tipoSeleccionado = e.target.value;
     renderCards(tipoSeleccionado);

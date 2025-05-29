@@ -101,22 +101,22 @@ if (emprendedor) {
             <h2 class="text-xl font-bold text-gray-900 mb-1">${item.titulo}</h2>
             <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
             <span class="text-xl font-extrabold text-[#7e8d48]">
-      ${
-        item.precioOferta
-          ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString(
-              "es-AR",
-              { style: "currency", currency: "ARS" }
-            )}</del>
-            ${item.precioOferta.toLocaleString("es-AR", {
-              style: "currency",
-              currency: "ARS",
-            })}`
-          : item.precio.toLocaleString("es-AR", {
-              style: "currency",
-              currency: "ARS",
-            })
-      }
-    </span>
+            ${
+              item.precioOferta
+                ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString(
+                    "es-AR",
+                    { style: "currency", currency: "ARS" }
+                  )}</del>
+                  ${item.precioOferta.toLocaleString("es-AR", {
+                    style: "currency",
+                    currency: "ARS",
+                  })}`
+                : item.precio.toLocaleString("es-AR", {
+                    style: "currency",
+                    currency: "ARS",
+                  })
+            }
+            </span>
             <div class="mt-auto flex items-center justify-between gap-2">
               <button class="bg-white text-gray-700 border border-gray-400 px-4 py-2 rounded-xl text-sm hover:bg-gray-100 transition duration-300 flex items-center gap-1">
                 <i class='bx bx-plus'></i>
@@ -136,7 +136,7 @@ if (emprendedor) {
     htmlProductosServicios += `</div>`;
   }
 
-  // Mostrar servicios
+  // Se muestran los servicios
   if (serviciosDelEmprendedor.length > 0) {
     htmlProductosServicios += `
       <h3 class="text-xl font-semibold mt-6">Servicios del Emprendedor</h3>
@@ -153,10 +153,21 @@ if (emprendedor) {
             <h2 class="text-xl font-bold text-gray-900 mb-1">${item.titulo}</h2>
             <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
             <span class="text-xl font-extrabold text-[#7e8d48]">
-              ${item.precio.toLocaleString("es-AR", {
-                style: "currency",
-                currency: "ARS",
-              })}
+            ${
+              item.precioOferta
+                ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString(
+                    "es-AR",
+                    { style: "currency", currency: "ARS" }
+                  )}</del>
+                  ${item.precioOferta.toLocaleString("es-AR", {
+                    style: "currency",
+                    currency: "ARS",
+                  })}`
+                : item.precio.toLocaleString("es-AR", {
+                    style: "currency",
+                    currency: "ARS",
+                  })
+            }
             </span>
             <div class="mt-auto flex items-center justify-between gap-2">
               <button class="bg-white text-gray-700 border border-gray-400 px-4 py-2 rounded-xl text-sm hover:bg-gray-100 transition duration-300">
