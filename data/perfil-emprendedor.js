@@ -122,7 +122,7 @@ if (emprendedor) {
                 <i class='bx bx-plus'></i>
                 Guardar
               </button>
-              <a href="/pages/detalle.html?tipo=producto&id=${
+              <a href="../pages/detalle.html?tipo=producto&id=${
                 item.id
               }" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
                 Ver Producto
@@ -173,7 +173,7 @@ if (emprendedor) {
               <button class="bg-white text-gray-700 border border-gray-400 px-4 py-2 rounded-xl text-sm hover:bg-gray-100 transition duration-300">
                 + Guardar
               </button>
-              <a href="/pages/detalle.html?tipo=servicio&id=${
+              <a href="../pages/detalle.html?tipo=servicio&id=${
                 item.id
               }" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
                 Ver Servicio

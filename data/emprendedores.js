@@ -105,7 +105,7 @@ const emprendedores = [
       telefono: "+54 9 383 7890123",
       email: "contacto@arteceramico.com",
     },
-    imagen: "/img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/Catamarket_Logo_3.png",
     redes: {
       instagram: "https://instagram.com/arteceramico",
       facebook: "https://facebook.com/arteceramico",
@@ -224,7 +224,7 @@ const mostrarTarjetas = (tipoSeleccionado) => {
 
       // Se crea un enlace para cada tarjeta
       const link = document.createElement("a");
-      link.href = `/pages/perfil-emprendedor.html?id=${emprendedor.id}`;
+      link.href = `../pages/perfil-emprendedor.html?id=${emprendedor.id}`;
       link.classList.add("block");
 
       // Se crea una etiqueta según el tipo de emprendedor

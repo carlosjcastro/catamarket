@@ -7,7 +7,7 @@ const servicios = [
     precioOferta: 3000,
     descripcion:
       "Terapia manual para reducir el estrés y mejorar el bienestar.",
-    imagen: "/img/servicios/spa.webp",
+    imagen: "../img/servicios/spa.webp",
     caracteristicas: [
       "Duración: 60 minutos",
       "Aromaterapia incluida",
@@ -24,7 +24,7 @@ const servicios = [
     precioOferta: 2400,
     descripcion:
       "Sesiones de yoga en la naturaleza para conectar cuerpo y mente.",
-    imagen: "/img/servicios/yoga.jpg",
+    imagen: "../img/servicios/yoga.jpg",
     caracteristicas: [
       "Duración: 90 minutos",
       "Espacios naturales",
@@ -40,7 +40,7 @@ const servicios = [
     precio: 8000,
     precioOferta: 4800,
     descripcion: "Servicio profesional para organizar tus finanzas y trámites.",
-    imagen: "/img/servicios/asesoriacontable.webp",
+    imagen: "../img/servicios/asesoriacontable.webp",
     caracteristicas: [
       "Consultas personalizadas",
       "Asesoramiento impositivo",
@@ -55,7 +55,7 @@ const servicios = [
     titulo: "Fotografía profesional de productos",
     precio: 6000,
     descripcion: "Fotos de alta calidad para tu catálogo o tienda online.",
-    imagen: "/img/servicios/fotografiaproductos.jpg",
+    imagen: "../img/servicios/fotografiaproductos.jpg",
     caracteristicas: [
       "Entrega digital en alta resolución",
       "Edición profesional",
@@ -70,7 +70,7 @@ const servicios = [
     titulo: "Diseño gráfico para redes sociales",
     precio: 7000,
     descripcion: "Creación de contenido visual para impulsar tu marca.",
-    imagen: "/img/servicios/diseñograficopararedes.jpg",
+    imagen: "../img/servicios/diseñograficopararedes.jpg",
     caracteristicas: [
       "Diseños personalizados",
       "Formato adaptable a redes",
@@ -100,7 +100,7 @@ servicios.forEach((item) => {
   }" class="h-48 w-full object-cover">
     <div class="p-4 flex flex-col flex-grow">
       <h2 class="text-xl font-bold text-gray-900 mb-1">${item.titulo}</h2>
-      <a href="/pages/perfil-emprendedor.html?id=${
+      <a href="../pages/perfil-emprendedor.html?id=${
         emprendedor.id
       }" class="text-sm text-gray-700 mb-1 hover:underline">
         @${emprendedor.nombre}
@@ -132,7 +132,7 @@ servicios.forEach((item) => {
           <i class='bx bx-plus'></i>
             Guardar
           </button>
-          <a href="/pages/detalle.html?tipo=servicio&id=${
+          <a href="../pages/detalle.html?tipo=servicio&id=${
             item.id
           }" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
             Ver Servicio

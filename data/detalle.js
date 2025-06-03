@@ -99,7 +99,7 @@ if (item) {
         <p class="text-gray-800 font-medium text-xl mb-2">@${
           emprendedor.nombre
         }</p>
-        <a href="/pages/perfil-emprendedor.html?id=${
+        <a href="../pages/perfil-emprendedor.html?id=${
           emprendedor.id
         }" class="text-blue-600 hover:underline text-sm">
           Ver perfil del emprendedor

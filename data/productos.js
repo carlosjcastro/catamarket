@@ -6,10 +6,10 @@ const productos = [
     precio: 1500,
     precioOferta: 900,
     descripcion: "Mermelada casera hecha con duraznos frescos de Catamarca.",
-    imagen: "/img/productos/mermeladadurazno.jpg",
+    imagen: "../img/productos/mermeladadurazno.jpg",
     imagenes: [
-      "/img/productos/mermeladadurazno2.jpg",
-      "/img/productos/mermeladadurazno3.jpg",
+      "../img/productos/mermeladadurazno2.jpg",
+      "../img/productos/mermeladadurazno3.jpg",
     ],
     caracteristicas: [
       "Hecho con fruta 100% natural",
@@ -26,8 +26,8 @@ const productos = [
     precio: 1200,
     precioOferta: 720,
     descripcion: "Pan elaborado con masa madre y cocido en horno de barro.",
-    imagen: "/img/productos/pandecampo.jpg",
-    imagenes: ["/img/productos/pandecampo2.jpg"],
+    imagen: "../img/productos/pandecampo.jpg",
+    imagenes: ["../img/productos/pandecampo2.jpg"],
     caracteristicas: [
       "Masa madre natural",
       "Horneado en horno de barro",
@@ -43,11 +43,11 @@ const productos = [
     precio: 2500,
     precioOferta: 1500,
     descripcion: "Aceite premium producido en los valles catamarqueños.",
-    imagen: "/img/productos/aceiteoliva.jpeg",
+    imagen: "../img/productos/aceiteoliva.jpeg",
     imagenes: [
-      "/img/aceite-oliva.jpg",
-      "/img/aceite-oliva-2.jpg",
-      "/img/aceite-oliva-3.jpg",
+      "../img/aceite-oliva.jpg",
+      "../img/aceite-oliva-2.jpg",
+      "../img/aceite-oliva-3.jpg",
     ],
     caracteristicas: [
       "Primera presión en frío",
@@ -64,8 +64,8 @@ const productos = [
     precio: 3500,
     precioOferta: 2100,
     descripcion: "Piezas decorativas hechas a mano por artistas locales.",
-    imagen: "/img/productos/artesaniaceramica.jpg",
-    imagenes: ["/img/productos/artesaniaceramica2.jpg"],
+    imagen: "../img/productos/artesaniaceramica.jpg",
+    imagenes: ["../img/productos/artesaniaceramica2.jpg"],
     caracteristicas: [
       "Hecho a mano",
       "Diseño exclusivo",
@@ -80,7 +80,7 @@ const productos = [
     titulo: "Té de hierbas andinas",
     precio: 800,
     descripcion: "Infusión natural con hierbas recolectadas en la puna.",
-    imagen: "/img/productos/tehierbas.jpg",
+    imagen: "../img/productos/tehierbas.jpg",
     caracteristicas: [
       "Mezcla de hierbas naturales",
       "Sin cafeína",
@@ -96,7 +96,7 @@ const productos = [
     precio: 14500,
     descripcion:
       "Poncho tejido a mano con lana de llama, ideal para el invierno.",
-    imagen: "/img/productos/poncholana.webp",
+    imagen: "../img/productos/poncholana.webp",
 
     caracteristicas: [
       "100% lana de llama",
@@ -112,11 +112,11 @@ const productos = [
     titulo: "Maceta decorativa de cerámica",
     precio: 3200,
     descripcion: "Maceta pintada a mano con motivos tradicionales del Valle.",
-    imagen: "/img/productos/macetadecorativa.jpg",
+    imagen: "../img/productos/macetadecorativa.jpg",
     imagenes: [
-      "/img/maceta-decorativa.jpg",
-      "/img/maceta-decorativa-2.jpg",
-      "/img/maceta-decorativa-3.jpg",
+      "../img/maceta-decorativa.jpg",
+      "../img/maceta-decorativa-2.jpg",
+      ".../img/maceta-decorativa-3.jpg",
     ],
     caracteristicas: [
       "Cerámica artesanal",
@@ -166,7 +166,7 @@ productosFiltrados.forEach((item) => {
   }" class="h-48 w-full object-cover" />
     <div class="p-4 flex flex-col flex-grow">
       <h2 class="text-xl font-bold text-gray-900 mb-1">${item.titulo}</h2>
-      <a href="/pages/perfil-emprendedor.html?id=${
+      <a href="../pages/perfil-emprendedor.html?id=${
         emprendedor.id
       }" class="text-sm text-gray-700 mb-1 hover:underline">
         @${emprendedor.nombre}
@@ -198,7 +198,7 @@ productosFiltrados.forEach((item) => {
             <i class='bx bx-plus'></i>
             Guardar
           </button>
-          <a href="/pages/detalle.html?tipo=producto&id=${
+          <a href="../pages/detalle.html?tipo=producto&id=${
             item.id
           }" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
             Ver Producto

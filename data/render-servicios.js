@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }" class="h-48 w-full object-cover" />
       <div class="p-4 flex flex-col flex-grow">
         <h2 class="text-xl font-bold text-gray-900 mb-1">${item.titulo}</h2>
-        <a href="/pages/perfil-emprendedor.html?id=${
+        <a href="../pages/perfil-emprendedor.html?id=${
           emprendedor.id
         }" class="text-sm text-gray-700 mb-1 hover:underline">
           @${emprendedor.nombre}
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <i class='bx bx-plus'></i>
               Guardar
             </button>
-            <a href="/pages/detalle.html?tipo=servicio&id=${
+            <a href="../pages/detalle.html?tipo=servicio&id=${
               item.id
             }" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
               Ver Servicio
