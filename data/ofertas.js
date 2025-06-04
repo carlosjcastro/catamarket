@@ -45,41 +45,42 @@ document.addEventListener("DOMContentLoaded", () => {
     card.className =
       "bg-[#FFF3E4] rounded-2xl border border-[#4F4538] shadow-md overflow-hidden flex flex-col";
 
-    card.innerHTML = `
-      <img src="${item.imagen}" alt="${
-      item.titulo
-    }" class="h-48 w-full object-cover" />
+    const ofertaTag = item.precioOferta
+    ? `<span class="bg-[#ffb703] text-black border-2 font-bold border-white py-1 px-3 text-xs rounded-full absolute top-2 right-2 z-10">Oferta</span>`
+    : "";
+
+  card.innerHTML = `
+      <div class="relative">
+        ${ofertaTag}
+        <img src="${item.imagen}" alt="${item.titulo}" class="h-48 w-full object-cover" />
+      </div>
       <div class="p-4 flex flex-col flex-grow">
         <h2 class="text-xl font-bold text-gray-900 mb-1">${item.titulo}</h2>
-        <a href="../pages/perfil-emprendedor.html?id=${
-          emprendedor.id
-        }" class="text-sm text-gray-700 mb-1 hover:underline">
+        <a href="../pages/perfil-emprendedor.html?id=${emprendedor.id}" class="text-sm text-gray-700 mb-1 hover:underline">
           @${emprendedor.nombre}
         </a>
         <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
         <div class="mt-auto flex items-center justify-between">
-        <div class="flex flex-col">
-        <del class="text-sm text-gray-500">
-            ${item.precio.toLocaleString("es-AR", {
-              style: "currency",
-              currency: "ARS",
-            })}
-        </del>
-        <span class="text-xl font-extrabold text-[#7e8d48]">
-            ${item.precioOferta.toLocaleString("es-AR", {
-              style: "currency",
-              currency: "ARS",
-            })}
-        </span>
-        </div>
+          <div class="flex flex-col">
+            <del class="text-sm text-gray-500">
+              ${item.precio.toLocaleString("es-AR", {
+                style: "currency",
+                currency: "ARS",
+              })}
+            </del>
+            <span class="text-xl font-extrabold text-[#7e8d48]">
+              ${item.precioOferta.toLocaleString("es-AR", {
+                style: "currency",
+                currency: "ARS",
+              })}
+            </span>
+          </div>
           <div class="flex gap-2">
             <button class="bg-white text-gray-700 border border-gray-400 px-4 py-2 rounded-xl text-sm hover:bg-gray-100 transition duration-300 flex items-center gap-1">
               <i class='bx bx-plus'></i>
               Guardar
             </button>
-            <a href="../pages/detalle.html?tipo=${tipo}&id=${
-      item.id
-    }" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
+            <a href="../pages/detalle.html?tipo=${tipo}&id=${item.id}" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
               Ver ${tipo === "producto" ? "Producto" : "Servicio"}
             </a>
           </div>
