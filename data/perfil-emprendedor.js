@@ -93,7 +93,7 @@ if (emprendedor) {
 
     productosDelEmprendedor.forEach((item) => {
       htmlProductosServicios += `
-        <div class="bg-[#FFF3E4] rounded-2xl border border-[#4F4538] shadow-md overflow-hidden flex flex-col">
+        <div class="bg-[#FFF3E4] rounded-2xl border border-[#4F4538] overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition duration-300">
           <img src="${item.imagen}" alt="${
         item.titulo
       }" class="h-48 w-full object-cover">

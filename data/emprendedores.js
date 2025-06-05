@@ -4,7 +4,7 @@ const emprendedores = [
     id: "dulce-catamarca",
     nombre: "Dulce Catamarca",
     descripcion:
-      "Dulce Catamarca es una pequeña empresa familiar que se dedica a la producción artesanal de mermeladas y productos regionales en la provincia de Catamarca.",
+      "Empresa familiar que se dedica a la producción artesanal de mermeladas y productos regionales.",
     contacto: {
       telefono: "+54 9 383 4567890",
       email: "correo@correo.com",
@@ -20,7 +20,7 @@ const emprendedores = [
     id: "sabores-rurales",
     nombre: "Sabores Rurales",
     descripcion:
-      "Sabores Rurales se dedica a la elaboración de pan de campo con recetas tradicionales utilizando masa madre.",
+      "Elaboración de pan de campo con recetas tradicionales utilizando masa madre.",
     contacto: {
       telefono: "+54 9 383 5678901",
       email: "correo@correo.com",
@@ -35,8 +35,7 @@ const emprendedores = [
   {
     id: "olivar-norte",
     nombre: "Olivar Norte",
-    descripcion:
-      "Olivar Norte es un aceite de oliva virgen extra de primera prensada en frío, elaborado en pequeñas partidas a partir de olivos centenarios ubicados en las sierras del norte argentino. Su sabor intenso y afrutado refleja la pureza del entorno natural y la dedicación artesanal de cada cosecha. Ideal para realzar ensaladas, pastas y platos gourmet.",
+    descripcion: "Aceite de oliva virgen extra de primera prensada en frío.",
     contacto: {
       telefono: "+54 9 383 5678901",
       email: "correo@correo.com",
@@ -52,7 +51,7 @@ const emprendedores = [
     id: "arte-ancestral",
     nombre: "Arte Ancestral",
     descripcion:
-      "Arte Ancestral es un emprendimiento dedicado a la creación de piezas únicas de cerámica artesanal, elaboradas a mano por artistas locales que combinan técnicas tradicionales con una mirada contemporánea. Cada obra refleja la riqueza cultural de nuestras raíces y busca dar valor al trabajo manual, auténtico y consciente.",
+      "Emprendimiento dedicado a la creación de piezas únicas de cerámica artesanal, elaboradas a mano por artistas locales.",
     contacto: {
       telefono: "+54 9 383 5678901",
       email: "correo@correo.com",
@@ -68,7 +67,7 @@ const emprendedores = [
     id: "pacha-infusiones",
     nombre: "Pacha Infusiones",
     descripcion:
-      "Pacha Infusiones nace del respeto por la tierra y el saber ancestral. Elaboramos infusiones naturales a base de hierbas recolectadas en forma sustentable en la puna y las sierras del noroeste argentino. Nuestros blends buscan reconectar con lo esencial: el sabor puro, los aromas nativos y el equilibrio interior.",
+      "Infusiones naturales con hierbas recolectadas de forma sustentable en Catamarca.",
     contacto: {
       telefono: "+54 9 383 5678901",
       email: "correo@correo.com",
@@ -84,7 +83,7 @@ const emprendedores = [
     id: "tejidos-inti",
     nombre: "Tejidos Inti",
     descripcion:
-      "Emprendimiento familiar que elabora prendas artesanales con fibras naturales como lana de llama y oveja, rescatando diseños ancestrales del noroeste argentino.",
+      "Emprendimiento familiar que elabora prendas artesanales con fibras naturales como lana de llama y oveja.",
     contacto: {
       telefono: "+54 9 383 6789123",
       email: "tejidosinti@gmail.com",
@@ -100,7 +99,7 @@ const emprendedores = [
     id: "arte-ceramico",
     nombre: "Arte Cerámico",
     descripcion:
-      "Taller artesanal dedicado a la creación de piezas únicas de cerámica utilitaria y decorativa, inspiradas en la flora, fauna y cultura del noroeste argentino.",
+      "Dedicado a la creación de piezas inspiradas en la flora, fauna y cultura del noroeste argentino.",
     contacto: {
       telefono: "+54 9 383 7890123",
       email: "contacto@arteceramico.com",
@@ -219,7 +218,11 @@ const mostrarTarjetas = (tipoSeleccionado) => {
         "flex-col",
         "items-center",
         "p-4",
-        "card"
+        "card",
+        "hover:shadow-xl",
+        "hover:-translate-y-1",
+        "transition",
+        "duration-300"
       );
 
       // Se crea un enlace para cada tarjeta

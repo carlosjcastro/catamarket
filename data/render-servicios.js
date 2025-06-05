@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const card = document.createElement("div");
     card.className =
-      "bg-[#FFF3E4] rounded-2xl border border-[#4F4538] shadow-md overflow-hidden flex flex-col";
+      "bg-[#FFF3E4] rounded-2xl border border-[#4F4538] overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition duration-300";
 
     card.innerHTML = `
       <img src="${item.imagen}" alt="${
@@ -82,13 +82,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
         <div class="mt-auto flex items-center justify-between">
           <span class="text-xl font-extrabold text-[#7e8d48]">
-            ${item.precio.toLocaleString("es-AR", {
-              style: "currency",
-              currency: "ARS",
-            })}
+          ${
+            item.precioOferta
+              ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}</del>
+                ${item.precioOferta.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}`
+              : item.precio.toLocaleString("es-AR", { style: "currency", currency: "ARS" })
+          }
           </span>
           <div class="flex gap-2">
-            <button class="bg-white text-gray-700 border border-gray-400 px-4 py-2 rounded-xl text-sm hover:bg-gray-100 transition duration-300 flex items-center gap-1">
+            <button class="bg-white text-gray-700 border border-gray-400 px-2 py-2 rounded-xl text-sm hover:bg-gray-100 transition duration-300 flex items-center gap-1">
               <i class='bx bx-plus'></i>
               Guardar
             </button>

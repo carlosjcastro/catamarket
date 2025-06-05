@@ -1,0 +1,18 @@
+.clip-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(222, 132, 84, 0.15);
+  clip-path: circle(0% at 0% 0%);
+  transition: clip-path 0.6s ease-in-out;
+  z-index: 0;
+}
+
+.clip-hover:hover::before {
+  clip-path: circle(150% at 0% 0%);
+}
+
+.clip-hover > * {
+  position: relative;
+  z-index: 1;
+}

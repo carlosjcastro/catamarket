@@ -2,12 +2,12 @@
 <html lang="es" x-data="{ open: false }" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="../img/ico/Catamarket.ico" type="image/x-icon" />
-    <title>Servicios | Catamarket</title>
+    <title>Preguntas Frecuentes | Catamarket</title>
     <!-- SEO -->
-    <meta name="description" content="Descubrí los mejores servicios de emprendedores en Catamarca. Desde mantenimiento, diseño, asesorías y más. Apoyá lo local con Catamarket." />
-    <meta name="keywords" content="servicios en Catamarca, emprendedores, Catamarket, mantenimiento, diseño gráfico, servicios locales, asesoramiento" />
+    <meta name="description" content="Resolvé tus dudas sobre cómo publicar en Catamarket, tiempos de aprobación, edición de publicaciones y funcionamiento general del sitio. Todo lo que necesitás saber en un solo lugar." />
+    <meta name="keywords" content="preguntas frecuentes Catamarket, publicar productos Catamarca, tiempos de publicación, editar publicación, visibilidad emprendedores, ayuda Catamarket, cómo funciona Catamarket" />
     <meta name="author" content="Catamarket" />
     <meta name="robots" content="index, follow" />
     <!-- Estilos e íconos -->
@@ -15,10 +15,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <link rel="stylesheet" href="../styles/emprendedores-cards.css" />
+    <link rel="stylesheet" href="../styles/ofertas.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
     </style>
+    <link rel="stylesheet" href="../styles/ofertas.css" />
     <script>
       tailwind.config = {
         theme: {
@@ -32,7 +33,7 @@
     </script>
   </head>
   <body class="font-poppins">
-    <!-- Header y Menú -->
+     <!-- Header y Menú -->
     <header class="bg-[#FFF3E4] shadow sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-20 items-center">
@@ -361,10 +362,239 @@
     </header>
 
     <!-- Principal -->
-    <main id="main-productos" class="max-w-7xl mx-auto p-6">
-      <div id="servicios"></div>
-    </main>
+    <main class="max-w-5xl w-full mx-auto px-4">
+    <div class="text-center mb-12 mt-16">
+        <h1 class="text-4xl font-extrabold text-gray-900">
+            Preguntas Frecuentes
+        </h1>
+    </div>
+      <div class="faq-wrapper px-5 pb-5 text-gray-700 leading-relaxe space-y-6">
+        <!-- Pregunta 1 -->
+        <div class="bg-white rounded-xl shadow-md">
+          <button
+            class="faq-btn flex justify-between items-center w-full p-5 hover:bg-[#C96C3A]/20"
+          >
+            <span class="text-lg font-semibold text-gray-800"
+              >¿Cuáles son los horarios de atención?</span
+            >
+            <svg
+              class="w-6 h-6 text-[#C96C3A] transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="faq-answer px-5 pb-5 text-gray-700 leading-relaxed hidden"
+          >
+            Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00
+            horas.
+          </div>
+        </div>
 
+        <!-- Pregunta 2 -->
+        <div class="bg-white rounded-xl shadow-md space-y-6">
+          <button
+            class="faq-btn flex justify-between items-center w-full p-5 hover:bg-[#C96C3A]/20"
+          >
+            <span class="text-lg font-semibold text-gray-800"
+              >¿Cómo puedo publicar un producto o servicio?</span
+            >
+            <svg
+              class="w-6 h-6 text-[#C96C3A] transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="faq-answer px-5 pb-5 text-gray-700 leading-relaxed hidden"
+          >
+            Para publicar un producto o servicio, debés acceder a la página de
+            <a class="text-[#C96C3A]" href="solicitar-publicacion.html"
+              >Solicitar publicación</a
+            >
+            y completar el formulario de carga con tu nombre, título del
+            producto o servicio, descripción, precio, imágenes, correo
+            electrónico de contacto, algún medio adicional de contacto y aceptar
+            la autorización de publicación.
+          </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="bg-white rounded-xl shadow-md space-y-6">
+          <button
+            class="faq-btn flex justify-between items-center w-full p-5 hover:bg-[#C96C3A]/20"
+          >
+            <span class="text-lg font-semibold text-gray-800"
+              >¿Cuánto tarda en aprobarse una publicación?</span
+            >
+            <svg
+              class="w-6 h-6 text-[#C96C3A] transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="faq-answer px-5 pb-5 text-gray-700 leading-relaxed hidden"
+          >
+            Una vez enviada, tu publicación pasa por un proceso de revisión que
+            puede demorar entre 24 y 48 horas hábiles. Te notificaremos cuando
+            esté aprobada o si requiere cambios.
+          </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="bg-white rounded-xl shadow-md space-y-6">
+          <button
+            class="faq-btn flex justify-between items-center w-full p-5 hover:bg-[#C96C3A]/20"
+          >
+            <span class="text-lg font-semibold text-gray-800"
+              >¿Ofrecen soporte técnico?</span
+            >
+            <svg
+              class="w-6 h-6 text-[#C96C3A] transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="faq-answer px-5 pb-5 text-gray-700 leading-relaxed hidden"
+          >
+            Sí, contamos con soporte técnico disponible de lunes a viernes de
+            9:00 a 18:00 horas. Puedes contactarnos por email o teléfono.
+          </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="bg-white rounded-xl shadow-md space-y-6">
+          <button
+            class="faq-btn flex justify-between items-center w-full p-5 hover:bg-[#C96C3A]/20"
+          >
+            <span class="text-lg font-semibold text-gray-800"
+              >¿Cuántas publicaciones puedo tener activas al mismo tiempo?</span
+            >
+            <svg
+              class="w-6 h-6 text-[#C96C3A] transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="faq-answer px-5 pb-5 text-gray-700 leading-relaxed hidden"
+          >
+            Actualmente no hay límite de publicaciones activas por emprendedor,
+            pero te recomendamos mantener tus publicaciones actualizadas para
+            mejorar la experiencia de los usuarios.
+          </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="bg-white rounded-xl shadow-md space-y-6">
+          <button
+            class="faq-btn flex justify-between items-center w-full p-5 hover:bg-[#C96C3A]/20"
+          >
+            <span class="text-lg font-semibold text-gray-800"
+              >¿Cómo puedo aumentar la visibilidad de mi publicación?</span
+            >
+            <svg
+              class="w-6 h-6 text-[#C96C3A] transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="faq-answer px-5 pb-5 text-gray-700 leading-relaxed hidden"
+          >
+            Podés mejorar la visibilidad incluyendo imágenes de buena calidad,
+            una descripción clara y palabras clave relevantes. También podés
+            compartir el enlace en redes sociales o elegir opciones de promoción
+            destacada (si están disponibles).
+          </div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="bg-white rounded-xl shadow-md space-y-6">
+          <button
+            class="faq-btn flex justify-between items-center w-full p-5 hover:bg-[#C96C3A]/20"
+          >
+            <span class="text-lg font-semibold text-gray-800"
+              >¿Dónde puedo pedir ayuda si tengo un problema con mi
+              publicación?</span
+            >
+            <svg
+              class="w-6 h-6 text-[#C96C3A] transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            class="faq-answer px-5 pb-5 text-gray-700 leading-relaxed hidden"
+          >
+            Si tenés algún inconveniente, podés contactar a nuestro equipo de
+            soporte desde la sección de Ayuda o enviando un correo a
+            <a class="text-[#C96C3A]" href="mailto:proyectocatamarket@gmail.com"
+              >proyectocatamarket@gmail.com</a
+            >. Estamos para ayudarte.
+          </div>
+        </div>
+      </div>
+    </main>
+    
     <!-- Footer -->
     <footer
       class="bg-[#FFF3E4] text-gray-800 py-10 mt-12 border-t border-gray-300"
@@ -541,10 +771,7 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="../data/servicios.js"></script>
-    <script src="../data/emprendedores.js" defer></script>
-    <script src="../data/render-servicios.js"></script>
+   <script src="../data/preguntas-frecuentes.js"></script>
   </body>
   <!--
   Contribuciones del equipo:

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" x-data="{ open: false }" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -365,19 +365,34 @@
     <main class="max-w-7xl mx-auto p-6">
       <h1 class="text-3xl font-bold text-center my-8">Ofertas</h1>
 
-      <!-- Contenedor de las cards -->
-      <div class="mb-6">
-        <label for="filtro-tipo" class="block text-lg font-semibold mb-2">
-          Filtrar por tipo:
-        </label>
-        <select
-          id="filtro-tipo"
-          class="bg-white border border-gray-300 rounded-lg px-4 py-2"
-        >
-          <option value="">Mostrar todo</option>
-          <option value="producto">Productos</option>
-          <option value="servicio">Servicios</option>
-        </select>
+      <!-- Contenedor de filtros -->
+      <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-6">
+        <div class="flex-1">
+          <label for="filtro-tipo" class="block text-lg font-semibold mb-2">
+            <i class='bx  bx-menu-filter'></i> Filtrar por tipo:
+          </label>
+          <select
+            id="filtro-tipo"
+            class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2"
+          >
+            <option value="">Mostrar todo</option>
+            <option value="producto">Productos</option>
+            <option value="servicio">Servicios</option>
+          </select>
+        </div>
+        <div class="flex-1">
+          <label for="orden-precio" class="block text-lg font-semibold mb-2">
+            <i class='bx  bx-menu-filter'></i> Ordenar por precio de oferta:
+          </label>
+          <select
+            id="orden-precio"
+            class="w-full bg-white border border-gray-300 rounded-lg px-4 py-2"
+          >
+            <option value="default">Mostrar todo</option>
+            <option value="asc">Menor a mayor</option>
+            <option value="desc">Mayor a menor</option>
+          </select>
+        </div>
       </div>
       <div id="ofertas"></div>
     </main>

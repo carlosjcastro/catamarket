@@ -158,7 +158,7 @@ productosFiltrados.forEach((item) => {
   // Crear el elemento card para cada producto
   const card = document.createElement("div");
   card.className =
-    "bg-[#FFF3E4] rounded-2xl border border-[#4F4538] shadow-md overflow-hidden flex flex-col";
+    "bg-[#FFF3E4] rounded-2xl border border-[#4F4538] overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition duration-300";
 
   const ofertaTag = item.precioOferta ? 
     `<span class="bg-[#ffb703] text-black border-2 font-bold border-white py-1 px-3 text-xs rounded-full absolute top-2 right-2 z-10">Oferta</span>` 
