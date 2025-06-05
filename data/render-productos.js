@@ -79,16 +79,25 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="../pages/perfil-emprendedor.html?id=${
           emprendedor.id
         }" class="text-sm text-gray-700 mb-1 hover:underline">
-          @${emprendedor.nombre}
+          <i class='bx bx-user'></i> ${emprendedor.nombre}
         </a>
         <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
         <div class="mt-auto flex items-center justify-between">
         <span class="text-xl font-extrabold text-[#7e8d48]">
           ${
             item.precioOferta
-              ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}</del>
-                ${item.precioOferta.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}`
-              : item.precio.toLocaleString("es-AR", { style: "currency", currency: "ARS" })
+              ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString(
+                  "es-AR",
+                  { style: "currency", currency: "ARS" }
+                )}</del>
+                ${item.precioOferta.toLocaleString("es-AR", {
+                  style: "currency",
+                  currency: "ARS",
+                })}`
+              : item.precio.toLocaleString("es-AR", {
+                  style: "currency",
+                  currency: "ARS",
+                })
           }
         </span>
           <div class="flex gap-2">

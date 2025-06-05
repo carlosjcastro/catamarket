@@ -95,15 +95,18 @@ if (item) {
       <!-- Sección aside: Emprendedor -->
       <aside class="w-full lg:w-1/3 bg-[#FFF3E4] border border-[#4F4538] shadow-md p-6 rounded-2xl h-fit">
         <h2 class="text-lg font-semibold mb-2 text-[#4F4538]">Emprendedor</h2>
-        <img src="${emprendedor.imagen || 'default-image.jpg'}" alt="Foto de ${emprendedor.nombre}" class="w-24 h-24 object-cover rounded-full mb-4 border">
-        <p class="text-gray-800 font-medium text-xl mb-2">@${
+        <img src="${emprendedor.imagen || "default-image.jpg"}" alt="Foto de ${
+    emprendedor.nombre
+  }" class="w-24 h-24 object-cover rounded-full mb-4 border">
+        <p class="text-gray-800 font-medium text-xl mb-2"><i class='bx bx-user'></i> ${
           emprendedor.nombre
         }</p>
-        <a href="../pages/perfil-emprendedor.html?id=${
-          emprendedor.id
-        }" class="text-blue-600 hover:underline text-sm">
-          Ver perfil del emprendedor
-        </a>
+      <a href="../pages/perfil-emprendedor.html?id=${
+        emprendedor.id
+      }" class="text-[#c96c3a] text-sm inline-flex items-center gap-1 group">
+        <span>Ver perfil del emprendedor</span>
+        <i class='text-xl bx bx-arrow-right-stroke text-base transition-transform duration-200 group-hover:translate-x-1'></i>
+      </a>
       </aside>
     </div>
   `;

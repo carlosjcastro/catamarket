@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="../pages/perfil-emprendedor.html?id=${
           emprendedor.id
         }" class="text-sm text-gray-700 mb-1 hover:underline">
-          @${emprendedor.nombre}
+          <i class='bx bx-user'></i> ${emprendedor.nombre}
         </a>
         <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
         <div class="mt-auto flex items-center justify-between">
