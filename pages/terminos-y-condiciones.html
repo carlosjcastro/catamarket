@@ -3,19 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="../img/ico/Catamarket.ico" type="image/x-icon" />
-    <title>Solicitud de publicación | Catamarket</title>
+    <link rel="shortcut icon" href="../img/ico/Catamarket.ico" type="image/x-icon">
+    <title>Términos y Condiciones| Catamarket</title>
     <!-- SEO -->
-    <meta name="description" content="Solicita publicar tu producto, servicio o emprendimiento en Catamarket. Forma parte de la comunidad catamarqueña más activa del mercado digital." />
-    <meta name="keywords" content="Catamarket, publicación, productos, servicios, emprendedores, Catamarca, solicitar publicación, mercado digital" />
+    <meta name="description" content="Lee los términos y condiciones de uso de Catamarket, un marketplace de emprendedores locales en Catamarca. Conoce las políticas de privacidad y responsabilidades al utilizar la plataforma." />
+    <meta name="keywords" content="Términos y Condiciones Catamarket, Política de privacidad, Marketplace Catamarca, Responsabilidad usuario, Uso de Catamarket, Emprendedores Catamarca, Condiciones de uso" />
     <meta name="author" content="Catamarket" />
     <meta name="robots" content="index, follow" />
     <!-- Estilos e íconos -->
-    <link rel="stylesheet" href="../styles/solicitar-publicacion.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
     </style>
@@ -31,7 +30,7 @@
       };
     </script>
   </head>
-  <body class="font-poppins">
+  <body class="bg-gray-100 font-sans">
     <!-- Header y Menú -->
     <header class="bg-[#FFF3E4] shadow sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -364,420 +363,129 @@
       </div>
     </header>
 
-    <!--Formulario externo de solicitud de publicacion de los productos / servicios-->
-    <main>
-      <section class="emprendedores">
-        <div class="Solicitud-publicacion">
-          <h1>Emprendedores Locales</h1>
-          <p>
-            Actualmente, la carga directa de productos o servicios no está
-            habilitada en el formulario. Podés enviarnos tu propuesta mediante
-            el siguiente enlace. Nuestro equipo revisará tu solicitud y, si
-            cumple con los requisitos, te contactará para coordinar la
-            publicación en nuestra plataforma.
+    <!-- Principal-->
+    <main class="py-10 px-5">
+      <div
+        class="container mx-auto max-w-3xl bg-white p-8 rounded-xl shadow-lg"
+      >
+        <!-- Sección Introducción -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">
+            <i class="bx bx-info-circle text-xl mr-2"></i>Introducción
+          </h2>
+          <p class="text-gray-700">
+            Bienvenido a Catamarket, un marketplace diseñado para conectar
+            emprendedores locales con potenciales clientes. Al utilizar nuestra
+            plataforma, aceptas los siguientes Términos y Condiciones. Te
+            recomendamos leer cuidadosamente este documento antes de utilizar
+            nuestros servicios.
           </p>
-          <a
-            href="https://forms.gle/1u43vwi6iT6TWbBr8"
-            target="_blank"
-            class="boton-solicitud"
-          >
-            Solicitar publicación
-          </a>
-        </div>
+        </section>
 
-        <h1 class="titulo-prod-serv">Próximos Productos / Servicios a publicar</h1>
+        <!-- Términos de Uso -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">
+            <i class="bx bx-legal text-xl mr-2"></i>Términos de Uso
+          </h2>
+          <p class="text-gray-700">
+            1. <strong>Acceso y Uso</strong>: Al acceder a Catamarket, te
+            comprometes a cumplir con estos Términos y Condiciones. Si no estás
+            de acuerdo con alguno de los puntos establecidos, no utilices la
+            plataforma.
+          </p>
+          <p class="text-gray-700">
+            2. <strong>Funcionalidad Limitada</strong>: Catamarket se utiliza
+            como un espacio para que los usuarios puedan navegar y explorar
+            productos o servicios de emprendedores locales. No es posible
+            realizar compras, registrarse, ni contactar directamente a los
+            emprendedores a través de la plataforma.
+          </p>
+          <p class="text-gray-700">
+            3. <strong>No Responsabilidad en Transacciones</strong>: Dado que
+            Catamarket no facilita transacciones ni comunicaciones entre
+            clientes y emprendedores, no nos hacemos responsables por la
+            calidad, entrega o garantías de los productos o servicios mostrados
+            en el marketplace.
+          </p>
+        </section>
 
-        <!--Visualizacion de los productos / servicios del emprendedor-->
-        <div class="productos">
-          <div class="producto">
-            <img
-              src="../img/productos/Canasta Artesanal de Mimbre.png"
-              alt="canasta-artesanal"
-            />
-            <hr class="divisor" />
-            <h3>Canasta Artesanal de Mimbre</h3>
-            <p>
-              Ideal para decorar tu hogar, organizar espacios o presentar
-              regalos de forma elegante. Hecha a mano con materiales naturales,
-              resistentes y sostenibles. Su diseño rústico y cálido aporta un
-              toque único a cualquier ambiente.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
+        <!-- Política de Privacidad -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">
+            <i class="bx bx-lock text-xl mr-2"></i>Política de Privacidad
+          </h2>
+          <p class="text-gray-700">
+            Valoramos tu privacidad. Catamarket recopila información básica de
+            navegación para mejorar la experiencia del usuario en la plataforma.
+            Esta información no será compartida con terceros sin tu
+            consentimiento explícito, excepto por razones legales.
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 mt-4">
+            <li>Datos de navegación y cookies para mejorar la experiencia.</li>
+            <li>Sin recopilación de información personal sensible.</li>
+          </ul>
+        </section>
+
+        <!-- Responsabilidad del Usuario -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">
+            <i class="bx bx-user text-xl mr-2"></i>Responsabilidad del Usuario
+          </h2>
+          <p class="text-gray-700">
+            Como usuario, te comprometes a utilizar Catamarket de manera ética y
+            legal, respetando los derechos de los emprendedores y otros
+            usuarios. Estás prohibido de:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 mt-4">
+            <li>
+              Publicar contenido ilegal o que infrinja derechos de propiedad
+              intelectual.
+            </li>
+            <li>
+              Realizar actividades fraudulentas o intentar dañar la plataforma.
+            </li>
+            <li>
+              Utilizar la plataforma de manera que interrumpa el servicio para
+              otros usuarios.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Modificación de los Términos -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-semibold mb-4">
+            <i class="bx bx-edit-alt text-xl mr-2"></i>Modificación de los
+            Términos
+          </h2>
+          <p class="text-gray-700">
+            Nos reservamos el derecho de modificar estos Términos y Condiciones
+            en cualquier momento. Las modificaciones se publicarán en esta
+            página, por lo que te recomendamos revisarlas periódicamente para
+            estar al tanto de cualquier cambio.
+          </p>
+        </section>
+
+        <!-- Contacto -->
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">
+            <i class="bx bx-envelope text-xl mr-2"></i>Contacto
+          </h2>
+          <p class="text-gray-700">
+            Si tienes alguna pregunta sobre estos Términos y Condiciones, no
+            dudes en contactarnos:
+          </p>
+          <ul class="list-disc pl-6 text-gray-700 mt-4">
+            <li>
+              Email:
               <a
-                href="https://www.instagram.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-instagram"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$8.900</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-
-          <div class="producto">
-            <img
-              src="../img/productos/Vela Aromática Artesanal en Frasco de Vidrio.png"
-              alt="vela-aromatica"
-            />
-            <hr class="divisor" />
-            <h3>Vela Aromática Artesanal en Frasco de Vidrio</h3>
-            <p>
-              Transformá tu espacio con esta vela artesanal hecha a base de cera
-              de soja y esencias naturales. Cada vela está vertida a mano en un
-              frasco de vidrio reciclado, ideal para crear un ambiente cálido y
-              relajante.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-instagram"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$4.500</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-
-          <div class="producto">
-            <img
-              src="../img/productos/Bufanda Tejida a Mano - Lana Pura de Oveja.png"
-              alt="Bufanda-tejida"
-            />
-            <hr class="divisor" />
-            <h3>Bufanda Tejida a Mano - Lana Pura de Oveja</h3>
-            <p>
-              Creá looks cálidos y auténticos con nuestras bufandas tejidas
-              artesanalmente. Hechas con lana 100% natural de productores
-              locales. Suaves, abrigadas y con tintes vegetales.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-facebook"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$11.800</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-
-          <div class="producto">
-            <img
-              src="../img/productos/Mochila Artesanal de Lona y Cuero.png"
-              alt="mochila-artesanal"
-            />
-            <hr class="divisor" />
-            <h3>Mochila Artesanal de Lona y Cuero</h3>
-            <p>
-              Diseñada para aventureros urbanos. Mochila resistente, hecha a
-              mano con lona gruesa e inserciones de cuero reciclado. Bolsillos
-              internos y cierre de broche imantado. Ideal para uso diario,
-              escapadas o como mochila de notebook.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-facebook"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$24.000</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-
-          <div class="producto">
-            <img
-              src="../img/productos/Servicio de Restauración de Muebles.png"
-              alt="servicio-restauracion-muebles"
-            />
-            <hr class="divisor" />
-            <h3>Servicio de Restauración de Muebles - “Nuevo con Historia”</h3>
-            <p>
-              Transformamos muebles antiguos o dañados en piezas únicas.
-              Técnicas de decapado, pintura a la tiza, barnizado y restauración
-              completa. Atención en Córdoba Capital y alrededores. Retiro y
-              entrega a domicilio.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-instagram"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$18.000</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-
-          <div class="producto">
-            <img
-              src="../img/productos/Cuadro Macramé Boho.png"
-              alt="Cuadro-mareame"
-            />
-            <hr class="divisor" />
-            <h3>Cuadro Macramé Boho - “Raíces y Texturas”</h3>
-            <p>
-              Cuadro decorativo hecho a mano con técnicas de macramé usando
-              algodón natural. Perfecto para darle un toque bohemio y cálido a
-              cualquier ambiente. Ideal para salas, dormitorios o espacios de
-              trabajo. Medidas: 40x60 cm.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-facebook"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$13.500</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-
-          <div class="producto">
-            <img
-              src="../img/productos/Set de Macetas Colgantes.png"
-              alt="macetas-colgantes"
-            />
-            <hr class="divisor" />
-            <h3>Set de Macetas Colgantes</h3>
-            <p>
-              Macetas de cerámica o cemento decoradas a mano, con cuerdas de
-              algodón natural para colgar. Incluye tres macetas en distintos
-              tamaños y colores pastel. Perfectas para suculentas o plantas
-              pequeñas. Ideal para balcones y rincones interiores.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-instagram"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$6.800</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-
-          <div class="producto">
-            <img
-              src="../img/productos/Servicio de Empaque Artesanal para Emprendedores.png"
-              alt="Empaque-artesanal"
-            />
-            <hr class="divisor" />
-            <h3>Servicio de Empaque Artesanal para Emprendedores</h3>
-            <p>
-              Diseño y producción de cajas, etiquetas y envoltorios
-              personalizados con materiales reciclados y técnicas artesanales.
-              Ideal para potenciar la imagen de tu marca con un toque único y
-              sustentable.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-facebook"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$1.250</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-
-          <div class="producto">
-            <img
-              src="../img/productos/mermelada de frutos rojos.png"
-              alt="Mermelada-artesanal"
-            />
-            <hr class="divisor" />
-            <h3>Mermelada Artesanal de Frutos Rojos</h3>
-            <p>
-              Preparada con frutas seleccionadas, cocción lenta y sin
-              conservantes. Su sabor intenso y natural es ideal para acompañar
-              desayunos, postres o regalar un toque casero a cualquier comida.
-              Envasada en frasco de vidrio reciclable y decorado a mano.
-            </p>
-            <hr class="divisor" />
-            <span
-              >Contacto:
-              <a href="https://wa.me/+5493834221100" target="_blank"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a href="mailto:catamarketemprendedor@gmail.com"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/catamarket_emprendedor"
-                target="_blank"
-                ><i class="fab fa-facebook"></i></a
-            ></span>
-            <hr class="divisor" />
-            <div class="precio-boton">
-              <p class="precio">$2.800</p>
-              <a href="#" class="btn-verde">Ver producto</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--Formulario de solicitud de publicacion-->
-      <section class="formulario-publicacion">
-        <h2>Formulario de Solicitud de Publicación</h2>
-        <form>
-          <label for="nombre">Nombre y Apellido *</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Ej: Juan Perez"
-            required
-          />
-
-          <label for="producto">Nombre del producto o servicio *</label>
-          <input
-            type="text"
-            id="producto"
-            name="producto"
-            placeholder="Ej: Macetas pintadas a mano"
-            required
-          />
-
-          <label for="descripcion"
-            >Descripción detallada del producto o servicio *</label
-          >
-          <textarea
-            id="descripcion"
-            name="descripcion"
-            rows="4"
-            placeholder="Ej: Macetas pintadas a mano con diseños únicos y personalizados. Ideales para decorar interiores y exteriores."
-            required
-          ></textarea>
-
-          <label for="precio">Precio estimado *</label>
-          <input
-            type="text"
-            id="precio"
-            name="precio"
-            placeholder="Ej: 9.500"
-            required
-          />
-
-          <label for="imagenes">Imágenes del producto o servicio *</label>
-          <input
-            type="file"
-            id="imagenes"
-            name="imagenes"
-            accept="image/*"
-            multiple
-            required
-          />
-          <small
-            >Sube hasta 10 archivos. Tamaño máximo: 100 MB por archivo.</small
-          >
-
-          <label for="email">Correo electrónico de contacto *</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Ej: tucorreo@gmail.com"
-            required
-          />
-
-          <label for="contacto"
-            >Medio adicional de Contacto (WhatsApp, Instagram, etc.)</label
-          >
-          <input
-            type="text"
-            id="contacto"
-            name="contacto"
-            placeholder="Ej: +54 9 383 4000000 / @tuemprendimiento"
-          />
-
-          <label class="checkbox">
-            <input type="checkbox" required />
-            Autorizo la publicación de este contenido en la plataforma.
-          </label>
-
-          <button type="submit">Enviar solicitud</button>
-        </form>
-      </section>
+                href="mailto:proyectocatamarket@gmail.com"
+                class="text-[#c96c3a]"
+                >proyectocatamarket@gmail.com</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -956,14 +664,4 @@
       </div>
     </footer>
   </body>
-  <!--
-  Contribuciones del equipo:
-  - Carlos José Castro Galante: Implementó la lógica funcional con JavaScript, estructuró los datos simulados y organizó las funcionalidades basadas en las historias de usuario.
-  - Luciano Alexis Luna Pacheco: Participó en el diseño general del sitio y la estructura visual, utilizando HTML5 y CSS3/Tailwind.
-  - Camila Fiama Reales Herbel: Diseñó interfaces en Canva, colaboró en la creación de estilos responsivos y la maquetación visual de componentes.
-  - Matías Tula Sarquis: Encargado de la estructura y maquetación de secciones, aplicando estilos con CSS3/Tailwind.
-  - Valentín Varas: Apoyó en la maquetación general, diseño de vistas principales y en la creación de estilos visuales adaptables.
-  - Francisco David Vega Varela: Diseñó interfaces en Figma y maquetó la página de inicio y componentes reutilizables, siempre con enfoque en la experiencia de usuario.
-  Fecha de creación: 29/05/2025
-  -->
 </html>

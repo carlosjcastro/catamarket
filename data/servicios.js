@@ -7,7 +7,8 @@ const servicios = [
     precioOferta: 3000,
     descripcion:
       "Terapia manual para reducir el estrés y mejorar el bienestar.",
-    imagen: "../img/servicios/spa.webp",
+    imagen: "img/servicios/spa.webp",
+    imagenes: ["../img/servicios/spa.webp"],
     caracteristicas: [
       "Duración: 60 minutos",
       "Aromaterapia incluida",
@@ -24,7 +25,8 @@ const servicios = [
     precioOferta: 2400,
     descripcion:
       "Sesiones de yoga en la naturaleza para conectar cuerpo y mente.",
-    imagen: "../img/servicios/yoga.jpg",
+    imagen: "img/servicios/yoga.jpg",
+    imagenes: ["../img/servicios/yoga.jpg"],
     caracteristicas: [
       "Duración: 90 minutos",
       "Espacios naturales",
@@ -40,7 +42,8 @@ const servicios = [
     precio: 8000,
     precioOferta: 4800,
     descripcion: "Servicio profesional para organizar tus finanzas y trámites.",
-    imagen: "../img/servicios/asesoriacontable.webp",
+    imagen: "img/servicios/asesoriacontable.webp",
+    imagenes: ["../img/servicios/asesoriacontable.webp"],
     caracteristicas: [
       "Consultas personalizadas",
       "Asesoramiento impositivo",
@@ -55,7 +58,8 @@ const servicios = [
     titulo: "Fotografía profesional de productos",
     precio: 6000,
     descripcion: "Fotos de alta calidad para tu catálogo o tienda online.",
-    imagen: "../img/servicios/fotografiaproductos.jpg",
+    imagen: "img/servicios/fotografiaproductos.jpg",
+    imagenes: ["../img/servicios/fotografiaproductos.jpg"],
     caracteristicas: [
       "Entrega digital en alta resolución",
       "Edición profesional",
@@ -70,7 +74,8 @@ const servicios = [
     titulo: "Diseño gráfico para redes sociales",
     precio: 7000,
     descripcion: "Creación de contenido visual para impulsar tu marca.",
-    imagen: "../img/servicios/diseñograficopararedes.jpg",
+    imagen: "img/servicios/diseñograficopararedes.jpg",
+    imagenes: ["../img/servicios/diseñograficopararedes.jpg"],
     caracteristicas: [
       "Diseños personalizados",
       "Formato adaptable a redes",
