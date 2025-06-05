@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" x-data="{ open: false }" class="scroll-smooth">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../img/ico/Catamarket.ico" type="image/x-icon">
@@ -12,10 +12,10 @@
     <meta name="robots" content="index, follow" />
     <!-- Estilos e íconos -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/contacto.css">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
     </style>
@@ -340,16 +340,20 @@
             <iconify-icon
               icon="heroicons:question-mark-circle"
               width="20"
-              ></iconify-icon>
-              <span>Ayuda</span>
-              <iconify-icon
+            ></iconify-icon>
+            <span>Ayuda</span>
+            <iconify-icon
               icon="heroicons:chevron-down"
               width="16"
-              ></iconify-icon>
+            ></iconify-icon>
           </button>
           <div x-show="open" class="ml-4 mt-2 space-y-2">
-            <a href="../pages/preguntas-frecuentes.html" class="block">Preguntas Frecuentes</a>
-            <a href="../pages/terminos-y-condiciones.html" class="block">Términos y Condiciones</a>
+            <a href="../pages/preguntas-frecuentes.html" class="block"
+              >Preguntas Frecuentes</a
+            >
+            <a href="../pages/terminos-y-condiciones.html" class="block"
+              >Términos y Condiciones</a
+            >
           </div>
         </div>
 
@@ -369,6 +373,15 @@
       <h1 class="text-3xl font-semibold text-center text-[#7e8d48] mt-16 mb-6">
         Envíanos tu mensaje o sugerencia
       </h1>
+
+      <!-- Mensaje de éxito -->
+      <div
+        id="successMessage"
+        class="hidden bg-green-200 text-green-800 p-4 rounded-xl mb-6"
+      >
+        <i class="bx bx-check-circle"></i> ¡Tu mensaje fue enviado exitosamente al equipo de Catamarket!
+      </div>
+
       <form
         id="contactForm"
         action="#"
@@ -376,7 +389,7 @@
         class="bg-[#FFF3E4] rounded-2xl border border-[#4F4538] w-full max-w-2xl p-8 rounded-lg shadow-xl space-y-6"
       >
         <!-- Nombre -->
-        <div>
+        <div class="relative">
           <label
             for="nombre"
             class="block text-sm font-medium text-gray-700 mb-1"
@@ -387,14 +400,16 @@
             type="text"
             id="nombre"
             name="nombre"
-            required
             placeholder="Ej: Juan Pérez"
             class="w-full px-4 py-2 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
           />
+          <p id="nombreError" class="text-red-500 text-sm mt-1 hidden">
+            Por favor, ingresá tu nombre.
+          </p>
         </div>
 
         <!-- Email -->
-        <div>
+        <div class="relative">
           <label
             for="email"
             class="block text-sm font-medium text-gray-700 mb-1"
@@ -405,14 +420,16 @@
             type="email"
             id="email"
             name="email"
-            required
             placeholder="Ej: tucorreo@gmail.com"
             class="w-full px-4 py-2 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
           />
+          <p id="emailError" class="text-red-500 text-sm mt-1 hidden">
+            Por favor, ingresá un correo electrónico válido.
+          </p>
         </div>
 
         <!-- Tipo de mensaje -->
-        <div>
+        <div class="relative">
           <label
             for="tipo"
             class="block text-sm font-medium text-gray-700 mb-1"
@@ -423,17 +440,19 @@
           <select
             id="tipo"
             name="tipo"
-            required
             class="w-full px-4 py-2 rounded-2xl border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
           >
             <option value="">Seleccioná una opción</option>
             <option value="consulta">Consulta General</option>
             <option value="sugerencia">Sugerencia</option>
           </select>
+          <p id="tipoError" class="text-red-500 text-sm mt-1 hidden">
+            Por favor, seleccioná un tipo de mensaje.
+          </p>
         </div>
 
         <!-- Mensaje -->
-        <div>
+        <div class="relative">
           <label
             for="mensaje"
             class="block text-sm font-medium text-gray-700 mb-1"
@@ -444,10 +463,12 @@
             id="mensaje"
             name="mensaje"
             rows="5"
-            required
             placeholder="Escribí tu mensaje acá..."
             class="w-full px-4 py-2 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A] resize-none"
           ></textarea>
+          <p id="mensajeError" class="text-red-500 text-sm mt-1 hidden">
+            Por favor, ingresá un mensaje.
+          </p>
         </div>
 
         <!-- Botón de envío -->

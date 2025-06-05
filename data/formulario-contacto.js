@@ -2,37 +2,113 @@ document.addEventListener("DOMContentLoaded", () => {
   const sendBtn = document.getElementById("sendBtn");
   const sendIcon = document.getElementById("sendIcon");
   const contactForm = document.getElementById("contactForm");
+  const successMessage = document.getElementById("successMessage");
 
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Permite validar si todos los campos requeridos están completos
-    const nombre = document.getElementById("nombre").value;
-    const email = document.getElementById("email").value;
-    const tipo = document.getElementById("tipo").value;
-    const mensaje = document.getElementById("mensaje").value;
+    const nombre = document.getElementById("nombre");
+    const email = document.getElementById("email");
+    const tipo = document.getElementById("tipo");
+    const mensaje = document.getElementById("mensaje");
 
-    if (!nombre || !email || !tipo || !mensaje) {
-      alert("Por favor, completá todos los campos.");
-      return;
+    resetErrors();
+
+    let isValid = true;
+
+    if (!nombre.value) {
+      showError("nombre", "Por favor, ingresá tu nombre.");
+      isValid = false;
+    } else {
+      setValid(nombre);
     }
 
-    // Si todos los campos están completos, se ejecuta la animación de envío
-    sendIcon.classList.add("translate-x-[-20px]");
+    if (!email.value || !validateEmail(email.value)) {
+      showError("email", "Por favor, ingresá un correo electrónico válido.");
+      isValid = false;
+    } else {
+      setValid(email);
+    }
 
-    setTimeout(() => {
-      sendIcon.classList.remove("translate-x-[-20px]");
-      sendIcon.classList.add("translate-x-[200px]");
-    }, 100);
+    if (!tipo.value) {
+      showError("tipo", "Por favor, seleccioná un tipo de mensaje.");
+      isValid = false;
+    } else {
+      setValid(tipo);
+    }
 
-    setTimeout(() => {
-      sendIcon.classList.remove("translate-x-[200px]");
-      sendIcon.classList.add("translate-x-0");
-    }, 1200);
+    if (!mensaje.value) {
+      showError("mensaje", "Por favor, ingresá un mensaje.");
+      isValid = false;
+    } else {
+      setValid(mensaje);
+    }
 
-    // Después de 1.5 segundos, simula el envío del formulario
-    setTimeout(() => {
-      alert("Tu mensaje se ha enviado correctamente."); // Se simula el envío
-    }, 1500);
+    // Si todos los campos son válidos, realizar la animación de envío
+    if (isValid) {
+      sendIcon.classList.add("translate-x-[-20px]");
+
+      setTimeout(() => {
+        sendIcon.classList.remove("translate-x-[-20px]");
+        sendIcon.classList.add("translate-x-[200px]");
+      }, 100);
+
+      setTimeout(() => {
+        sendIcon.classList.remove("translate-x-[200px]");
+        sendIcon.classList.add("translate-x-0");
+      }, 1200);
+
+      // Se muestra un mensaje de éxito
+      setTimeout(() => {
+        successMessage.classList.remove("hidden");
+        contactForm.reset();
+        setTimeout(() => {
+          successMessage.classList.add("hidden");
+        }, 3000);
+      }, 1500);
+    }
   });
+
+  // Función para mostrar un mensaje de error
+function showError(field, message) {
+  const errorElement = document.getElementById(`${field}Error`);
+  errorElement.textContent = message;
+  errorElement.classList.remove("hidden");
+  
+  const inputElement = document.getElementById(field);
+  inputElement.classList.add("border-red-500");
+  inputElement.classList.remove("border-green-500");
+  
+  inputElement.classList.add("shake");
+
+  setTimeout(() => {
+    inputElement.classList.remove("shake");
+  }, 500);
+}
+
+  // Función para marcar un campo como válido
+  function setValid(input) {
+    input.classList.remove("border-red-500");
+    input.classList.add("border-green-500");
+  }
+
+  // Función para resetear los mensajes de error
+  function resetErrors() {
+    const errorMessages = document.querySelectorAll(".text-red-500");
+    errorMessages.forEach((error) => {
+      error.classList.add("hidden");
+    });
+
+    const inputs = contactForm.querySelectorAll("input, select, textarea");
+    inputs.forEach((input) => {
+      input.classList.remove("border-red-500");
+      input.classList.remove("border-green-500");
+    });
+  }
+
+  // Función para validar email
+  function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email);
+  }
 });
