@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       formTitle.textContent = "Iniciar Sesión";
       formSubtext.textContent = "Accedé a tu cuenta";
       emailLabel.textContent = "Correo Electrónico";
-      toggleButton.textContent = "Inicia sesión como emprendedor";
+      toggleButton.textContent = "Iniciá sesión como emprendedor";
       sideImage.src = "../img/inicio-sesion/catedral.png";
     }
   });
