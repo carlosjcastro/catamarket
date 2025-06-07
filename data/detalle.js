@@ -96,11 +96,11 @@ if (item) {
       <aside class="w-full lg:w-1/3 bg-[#FFF3E4] border border-[#4F4538] shadow-md p-6 rounded-2xl h-fit">
         <h2 class="text-lg font-semibold mb-2 text-[#4F4538]">Emprendedor</h2>
         <img src="${emprendedor.imagen || "default-image.jpg"}" alt="Foto de ${
-    emprendedor.nombre
-  }" class="w-24 h-24 object-cover rounded-full mb-4 border">
-        <p class="text-gray-800 font-medium text-xl mb-2"><i class='bx bx-user'></i> ${
-          emprendedor.nombre
-        }</p>
+        emprendedor.nombre
+      }" class="w-24 h-24 object-cover rounded-full mb-4 border">
+            <p class="text-gray-800 font-medium text-xl mb-2"><i class='bx bx-user'></i> ${
+              emprendedor.nombre
+            }</p>
       <a href="../pages/perfil-emprendedor.html?id=${
         emprendedor.id
       }" class="text-[#c96c3a] text-sm inline-flex items-center gap-1 group">
@@ -124,5 +124,5 @@ if (item) {
   - Matías Tula Sarquis: Encargado de la estructura y maquetación de secciones, aplicando estilos con CSS3/Tailwind.
   - Valentín Varas: Apoyó en la maquetación general, diseño de vistas principales y en la creación de estilos visuales adaptables.
   - Francisco David Vega Varela: Diseñó interfaces en Figma y maquetó la página de inicio y componentes reutilizables, siempre con enfoque en la experiencia de usuario.
-  Fecha de creación: 29/05/2025
+  Fecha de creación: 13/06/2025
 */

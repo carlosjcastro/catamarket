@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/ico/Catamarket.ico" type="image/x-icon">
+    <title>Registro | Catamarket</title>
+    <!-- SEO -->
+    <meta name="description" content="Regístrate en Catamarket como cliente o emprendedor y accedé a oportunidades exclusivas en Catamarca. Creá tu cuenta y empezá a comprar o vender fácilmente." />
+    <meta name="keywords" content="Registro Catamarket, Crear cuenta Catamarket, Emprendedores Catamarca, Clientes Catamarket, Vender online Catamarca, Registrarse Catamarket" />
+    <meta name="author" content="Catamarket" />
+    <meta name="robots" content="index, follow" />
+    <!-- Estilos e íconos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../styles/contacto.css">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-poppins">
+    
+    <!-- Principal -->
+    <main class="h-screen w-screen flex flex-col md:flex-row bg-gray-100">
+      <!-- Formulario -->
+      <div class="w-full md:w-1/2 flex items-center justify-center p-6">
+        <form
+          id="registerForm"
+          class="w-full max-w-md bg-[#FFF3E4] rounded-2xl border border-[#4F4538] p-6 shadow-lg space-y-4"
+        >
+          <div class="text-center">
+            <h2 id="formTitle" class="text-3xl font-bold text-[#7e8d48]">
+              Registro de Cliente
+            </h2>
+            <p id="formSubtext" class="text-sm text-gray-500 mt-1">
+              Creá tu cuenta personal
+            </p>
+          </div>
+
+          <!-- Nombre -->
+          <div>
+            <label for="nombre" class="block text-sm font-medium"
+              >Nombre completo</label
+            >
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej: Juan Perez"
+              class="w-full rounded-2xl px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
+            />
+            <p id="nombreError" class="text-sm text-red-500 hidden"></p>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium"
+              >Correo electrónico</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ej: tucorreo@gmail.com"
+              class="w-full rounded-2xl px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
+            />
+            <p id="emailError" class="text-sm text-red-500 hidden"></p>
+          </div>
+
+          <!-- Contraseña -->
+          <div>
+            <label for="password" class="block text-sm font-medium"
+              >Contraseña</label
+            >
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Ej: contraseña123"
+              class="w-full rounded-2xl px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
+            />
+            <p id="passwordError" class="text-sm text-red-500 hidden"></p>
+          </div>
+
+          <!-- Campos adicionales para emprendedores -->
+          <div id="extraFields" class="space-y-4 hidden">
+            <div>
+              <label for="empresa" class="block text-sm font-medium"
+                >Nombre de la empresa</label
+              >
+              <input
+                type="text"
+                id="empresa"
+                name="empresa"
+                placeholder="Ej: Dulce Catamarca"
+                class="w-full rounded-2xl px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
+              />
+              <p id="empresaError" class="text-sm text-red-500 hidden"></p>
+            </div>
+
+            <!-- Rubro o industria -->
+            <div>
+              <label for="rubro" class="block text-sm font-medium"
+                >Rubro o industria</label
+              >
+              <input
+                type="text"
+                id="rubro"
+                name="rubro"
+                placeholder="Ej: Gastronomía"
+                class="w-full rounded-2xl px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
+              />
+              <p id="rubroError" class="text-sm text-red-500 hidden"></p>
+            </div>
+
+            <!-- Sitio web o Red social -->
+            <div>
+              <label for="web" class="block text-sm font-medium"
+                >Sitio web</label
+              >
+              <input
+                type="url"
+                id="web"
+                name="web"
+                placeholder="Ej: tusitioweb.com.ar (o Red Social)"
+                class="w-full rounded-2xl px-4 py-2 border border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
+              />
+              <p id="webError" class="text-sm text-red-500 hidden"></p>
+            </div>
+
+            <!-- Teléfono -->
+            <div>
+              <label for="telefono" class="block text-sm font-medium"
+                >Teléfono</label
+              >
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Ej: +54 9 383 400000"
+                class="w-full rounded-2xl px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
+              />
+              <p id="telefonoError" class="text-sm text-red-500 hidden"></p>
+            </div>
+          </div>
+
+          <!-- Mensaje de éxito -->
+          <p
+            id="successMessage"
+            class="text-green-600 text-sm text-center font-medium hidden"
+          >
+            ¡Te has registro exitosamente!
+          </p>
+
+          <!-- Botón -->
+          <button
+            type="submit"
+            id="sendBtn"
+            class="w-full px-2 py-2 bg-[#7e8d48] hover:bg-[#657a3b] transition duration-300 text-white font-semibold rounded-xl"
+          >
+            Registrarse
+          </button>
+
+          <!-- Cambiar de rol-->
+          <button
+            type="button"
+            id="toggleRole"
+            class="w-full mt-2 text-[#7e8d48] hover:underline text-sm font-medium"
+          >
+            ¿Sos emprendedor? Regístrate aquí
+          </button>
+
+          <!-- Enlace a inicio de sesión -->
+          <a
+            href="../pages/inicio-sesion.html"
+            class="w-full mt-2 block text-center text-[#7e8d48] hover:underline text-sm font-medium"
+          >
+            ¿Ya tenés cuenta? Iniciá sesión
+          </a>
+
+          <!-- Botón de volver al inicio -->
+          <a
+            href="../index.html"
+            class="w-full mt-4 flex items-center justify-center gap-2 text-black py-2 border-2 border-[#7e8d48] rounded-xl hover:bg-[#6c7e3d]/50 hover:text-white transition-colors duration-200 group"
+          >
+            <i
+              class="bx bx-left-arrow-alt text-lg transition-transform duration-200 group-hover:-translate-x-1"
+            ></i>
+            Volver al inicio
+          </a>
+        </form>
+      </div>
+
+      <!-- Imagen -->
+      <div class="hidden md:block w-full md:w-1/2 h-64 md:h-full">
+        <img
+          id="sideImage"
+          src="../img/registro/virgendelvalle.png"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../data/registro.js"></script>
+  </body>
+  <!--
+  Contribuciones del equipo:
+  - Carlos José Castro Galante: Implementó la lógica funcional con JavaScript, estructuró los datos simulados y organizó las funcionalidades basadas en las historias de usuario.
+  - Luciano Alexis Luna Pacheco: Participó en el diseño general del sitio y la estructura visual, utilizando HTML5 y CSS3/Tailwind.
+  - Camila Fiama Reales Herbel: Diseñó interfaces en Canva, colaboró en la creación de estilos responsivos y la maquetación visual de componentes.
+  - Matías Tula Sarquis: Encargado de la estructura y maquetación de secciones, aplicando estilos con CSS3/Tailwind.
+  - Valentín Varas: Apoyó en la maquetación general, diseño de vistas principales y en la creación de estilos visuales adaptables.
+  - Francisco David Vega Varela: Diseñó interfaces en Figma y maquetó la página de inicio y componentes reutilizables, siempre con enfoque en la experiencia de usuario.
+  Fecha de creación: 13/06/2025
+  -->
+</html>

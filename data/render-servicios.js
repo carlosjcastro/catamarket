@@ -125,5 +125,5 @@ document.addEventListener("DOMContentLoaded", () => {
   - Matías Tula Sarquis: Encargado de la estructura y maquetación de secciones, aplicando estilos con CSS3/Tailwind.
   - Valentín Varas: Apoyó en la maquetación general, diseño de vistas principales y en la creación de estilos visuales adaptables.
   - Francisco David Vega Varela: Diseñó interfaces en Figma y maquetó la página de inicio y componentes reutilizables, siempre con enfoque en la experiencia de usuario.
-  Fecha de creación: 29/05/2025
+  Fecha de creación: 13/06/2025
 */
