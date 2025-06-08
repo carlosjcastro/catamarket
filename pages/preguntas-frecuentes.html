@@ -19,6 +19,21 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
     </style>
+    <style>
+      .message-enter {
+        animation: enter 0.3s ease-out forwards;
+      }
+      @keyframes enter {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      </style>
     <link rel="stylesheet" href="../styles/ofertas.css" />
     <script>
       tailwind.config = {
@@ -378,11 +393,11 @@
 
     <!-- Principal -->
     <main class="max-w-5xl w-full mx-auto px-4">
-    <div class="text-center mb-12 mt-16">
+      <div class="text-center mb-12 mt-16">
         <h1 class="text-4xl font-extrabold text-gray-900">
-            Preguntas Frecuentes
+          Preguntas Frecuentes
         </h1>
-    </div>
+      </div>
       <div class="faq-wrapper px-5 pb-5 text-gray-700 leading-relaxe space-y-6">
         <!-- Pregunta 1 -->
         <div class="bg-white rounded-xl shadow-md">
@@ -608,8 +623,106 @@
           </div>
         </div>
       </div>
+
+      <!-- Servicios para Emprendedores -->
+      <section class="p-6 mt-16">
+        <h2 class="text-xl font-semibold text-gray-800">
+          Servicios para Emprendedores
+        </h2>
+        <p class="text-gray-700 mt-2">
+          En Catamarket, ofrecemos diversas herramientas para ayudarte a
+          gestionar y promover tu negocio local. A continuación, te mostramos
+          algunos de nuestros servicios más destacados:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+          <!-- Card 1: Promociona tu Tienda -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <i class="text-2xl bx bx-store w-12 h-12 text-[#c96c3a]"></i>
+            <h3 class="text-lg font-semibold text-gray-800">
+              Promociona tu Tienda
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Haz crecer tu presencia digital con nuestras herramientas de
+              promoción y visibilidad.
+            </p>
+          </div>
+
+          <!-- Card 2: Aumenta tus Ventas -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <i class="text-2xl bx bx-shopping-bag w-12 h-12 text-[#c96c3a]"></i>
+            <h3 class="text-lg font-semibold text-gray-800">
+              Aumenta tus Ventas
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Optimiza tus procesos de venta y llega a más clientes potenciales
+              en Catamarca.
+            </p>
+          </div>
+
+          <!-- Card 3: Asesoría Personalizada -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <i class="text-2xl bx bx-message w-12 h-12 text-[#c96c3a]"></i>
+            <h3 class="text-lg font-semibold text-gray-800">
+              Asesoría Personalizada
+            </h3>
+            <p class="text-gray-600 mt-2">
+              Obtén asesoramiento para mejorar tu negocio y aprovechar nuestras
+              herramientas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instrucciones para usar el Chatbot -->
+      <section class="bg-[#FFF3E4] rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-800">
+          ¿Cómo usar el Asistente Virtual?
+        </h2>
+        <p class="text-gray-700 mt-2">
+          Nuestro asistente virtual, Caty, está disponible para responder tus
+          dudas sobre nuestros servicios o cómo mejorar tu negocio. Solo escribe
+          tu pregunta en el chat y Caty te ayudará rápidamente.
+        </p>
+      </section>
+
+      <!-- Chatbot -->
+      <section
+        id="chat-container"
+        class="w-full h-screen flex justify-center items-center"
+      >
+        <div
+          class="w-full max-w-2xl p-6 bg-[#FFF3E4] rounded-lg shadow-xl flex flex-col"
+        >
+          <!-- Título -->
+          <div class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">
+              Caty - Asistente Virtual de Catamarket
+            </h1>
+          </div>
+
+          <!-- Ventana de chat -->
+          <div
+            id="chat-box"
+            class="h-80 overflow-y-auto mb-4 p-4 border border-gray-300 rounded-lg bg-gray-50 space-y-2"
+          ></div>
+
+          <!-- Área de opciones -->
+          <div
+            id="options-container"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          ></div>
+
+          <!-- Limpiar Chat -->
+          <button
+            id="reset-chat"
+            class="mt-4 px-4 py-2 text-[#c1121f] hover:bg-[#c1121f] hover:text-white rounded-2xl transition-all"
+          >
+            <i class="bx bx-trash"></i> Limpiar Chat
+          </button>
+        </div>
+      </section>
     </main>
-    
+
     <!-- Footer -->
     <footer
       class="bg-[#FFF3E4] text-gray-800 py-10 mt-12 border-t border-gray-300"
@@ -786,7 +899,9 @@
       </div>
     </footer>
 
-  <script src="../data/preguntas-frecuentes.js"></script>
+    <!-- Scripts -->
+    <script src="../data/preguntas-frecuentes.js"></script>
+    <script src="../data/chatbot.js"></script>
   </body>
   <!--
   Contribuciones del equipo:
