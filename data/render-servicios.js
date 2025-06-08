@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const card = document.createElement("div");
     card.className =
-      "bg-[#FFF3E4] rounded-2xl border border-[#4F4538] overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition duration-300";
+      "bg-[#FFF3E4] rounded-2xl border-2 border-[#4F4538] overflow-hidden flex flex-col hover:shadow-xl hover:border-[#c96c3a] hover:-translate-y-1 transition duration-300";
 
     card.innerHTML = `
       <img src="${item.imagen}" alt="${

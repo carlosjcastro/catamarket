@@ -209,7 +209,7 @@ const mostrarTarjetas = (tipoSeleccionado) => {
       const tarjeta = document.createElement("div");
       tarjeta.classList.add(
         "bg-[#FFF3E4]",
-        "border",
+        "border-2",
         "border-[#4F4538]",
         "rounded-2xl",
         "shadow-lg",
@@ -221,6 +221,7 @@ const mostrarTarjetas = (tipoSeleccionado) => {
         "card",
         "hover:shadow-xl",
         "hover:-translate-y-1",
+        "hover:border-[#c96c3a]",
         "transition",
         "duration-300"
       );
