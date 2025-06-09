@@ -1,4 +1,65 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const passwordInput = document.getElementById("password");
+  const passwordCriteria = document.getElementById("passwordCriteria");
+
+  // Son los requisitos de la contraseña que se mostrarán al usuario siguiendo lo trabajado en UX
+  const lengthCriteria = document.getElementById("lengthCriteria");
+  const uppercaseCriteria = document.getElementById("uppercaseCriteria");
+  const numberCriteria = document.getElementById("numberCriteria");
+  const specialCharCriteria = document.getElementById("specialCharCriteria");
+
+  // Esto permite validar la contraseña
+  passwordInput.addEventListener("input", function() {
+    const passwordValue = passwordInput.value;
+
+    if (passwordValue.trim()) {
+      passwordCriteria.classList.remove("hidden");
+    }
+
+    const hasMinLength = passwordValue.length >= 8;
+    const hasUppercase = /[A-Z]/.test(passwordValue);
+    const hasNumber = /\d/.test(passwordValue);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(passwordValue);
+
+    toggleCriteria(lengthCriteria, hasMinLength);
+    toggleCriteria(uppercaseCriteria, hasUppercase);
+    toggleCriteria(numberCriteria, hasNumber);
+    toggleCriteria(specialCharCriteria, hasSpecialChar);
+  });
+
+  // Permite mostrar u ocultar los criterios de la contraseña con un icono y texto
+  function toggleCriteria(element, isValid) {
+    const icon = element.querySelector('i');
+    const text = element.querySelector('span');
+    const isChecked = element.classList.contains("line-through");
+
+    if (isValid) {
+      if (!isChecked) {
+        if (!icon.classList.contains("bx-check")) {
+          icon.classList.remove("bx-x-circle");
+          icon.classList.add("bx-check");
+        }
+        
+        element.classList.remove("text-red-500");
+        element.classList.add("text-green-500");
+        
+        element.classList.add("line-through");
+      }
+    } else {
+      if (isChecked) {
+        element.classList.remove("line-through");
+      }
+      
+      if (!icon.classList.contains("bx-x-circle")) {
+        icon.classList.remove("bx-check");
+        icon.classList.add("bx-x-circle");
+      }
+      
+      element.classList.remove("text-green-500");
+      element.classList.add("text-red-500");
+    }
+  }
+
   let isEntrepreneur = false;
 
   const form = document.getElementById("registerForm");
@@ -12,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleRole.addEventListener("click", () => {
     isEntrepreneur = !isEntrepreneur;
 
-    // Cambia el texto del botón y los campos del formulario según el rol. Además, cambia la imagen
     if (isEntrepreneur) {
       formTitle.textContent = "Registro de Emprendedor";
       formSubtext.textContent = "Conecta tu empresa con oportunidades";
@@ -52,9 +112,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!password.value.trim()) {
       showError("password", "La contraseña es obligatoria.");
       isValid = false;
-    } else setValid(password);
+    } else {
+      // Se valida si la contraseña cumple con los requisitos
+      const hasMinLength = password.value.length >= 8;
+      const hasUppercase = /[A-Z]/.test(password.value);
+      const hasNumber = /\d/.test(password.value);
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password.value);
 
-    // Se validan los campos adicionales si es emprendedor
+      if (!(hasMinLength && hasUppercase && hasNumber && hasSpecialChar)) {
+        showError("password", "La contraseña no cumple con los requisitos.");
+        isValid = false;
+      }
+    }
+
+    // Validación adicional para los campos de emprendedores
     if (isEntrepreneur) {
       const empresa = document.getElementById("empresa");
       const rubro = document.getElementById("rubro");
@@ -82,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else setValid(telefono);
     }
 
-    // Si todos los campos son válidos, se muestra el toast
+    // Si todos los campos son válidos, se muestra el toast de éxito
     if (isValid) {
       toastSuccess.classList.remove("hidden");
       setTimeout(() => {
@@ -121,6 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return re.test(email);
   }
 });
+
 
 /*
   Contribuciones del equipo:

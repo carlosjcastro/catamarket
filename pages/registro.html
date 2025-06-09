@@ -48,9 +48,7 @@
   <body class="font-poppins">
     
     <!-- Principal -->
-    <main
-      class="h-screen w-screen flex flex-col md:flex-row overflow-x-hidden"
-    >
+    <main class="h-screen w-screen flex flex-col md:flex-row overflow-x-hidden">
       <!-- Formulario -->
       <div class="w-full md:w-1/2 flex items-center justify-center p-6">
         <form
@@ -105,10 +103,28 @@
               type="password"
               id="password"
               name="password"
-              placeholder="Ej: contraseña123"
+              placeholder="Ej: Contraseña123$"
               class="w-full rounded-2xl px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
             />
             <p id="passwordError" class="text-sm text-red-500 hidden"></p>
+
+            <!-- Requisitos -->
+            <ul id="passwordCriteria" class="text-sm mt-2 space-y-1">
+              <li id="lengthCriteria" class="text-red-500">
+                <i class="bx bx-x-circle"></i> Mínimo 8 caracteres
+              </li>
+              <li id="uppercaseCriteria" class="text-red-500">
+                <i class="bx bx-x-circle"></i> Debe contener al menos una letra
+                mayúscula
+              </li>
+              <li id="numberCriteria" class="text-red-500">
+                <i class="bx bx-x-circle"></i> Debe contener al menos un número
+              </li>
+              <li id="specialCharCriteria" class="text-red-500">
+                <i class="bx bx-x-circle"></i> Debe contener al menos un
+                carácter especial (Ej: $, %, &)
+              </li>
+            </ul>
           </div>
 
           <!-- Campos adicionales para emprendedores -->
