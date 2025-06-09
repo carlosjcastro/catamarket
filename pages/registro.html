@@ -17,6 +17,20 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles/contacto.css">
     <style>
+    @keyframes slideIn {
+      0% {
+        transform: translate(-50%, 100%);
+      }
+      100% {
+        transform: translate(-50%, 0);
+      }
+    }
+
+    .animate-toast {
+      animation: slideIn 0.5s ease-out;
+    }
+  </style>
+    <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
     </style>
     <script>
@@ -34,7 +48,9 @@
   <body class="font-poppins">
     
     <!-- Principal -->
-    <main class="h-screen w-screen flex flex-col md:flex-row bg-gray-100">
+    <main
+      class="h-screen w-screen flex flex-col md:flex-row overflow-x-hidden"
+    >
       <!-- Formulario -->
       <div class="w-full md:w-1/2 flex items-center justify-center p-6">
         <form
@@ -126,21 +142,6 @@
               <p id="rubroError" class="text-sm text-red-500 hidden"></p>
             </div>
 
-            <!-- Sitio web o Red social -->
-            <div>
-              <label for="web" class="block text-sm font-medium"
-                >Sitio web</label
-              >
-              <input
-                type="url"
-                id="web"
-                name="web"
-                placeholder="Ej: tusitioweb.com.ar (o Red Social)"
-                class="w-full rounded-2xl px-4 py-2 border border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#C96C3A]"
-              />
-              <p id="webError" class="text-sm text-red-500 hidden"></p>
-            </div>
-
             <!-- Teléfono -->
             <div>
               <label for="telefono" class="block text-sm font-medium"
@@ -157,13 +158,14 @@
             </div>
           </div>
 
-          <!-- Mensaje de éxito -->
-          <p
-            id="successMessage"
-            class="text-green-600 text-sm text-center font-medium hidden"
+          <!-- Toast -->
+          <div
+            id="toastSuccess"
+            class="hidden fixed left-1/2 transform -translate-x-1/2 bottom-5 p-4 bg-green-600 text-white text-sm rounded-2xl shadow-lg flex items-center space-x-2 transition-all duration-500 animate-toast"
           >
-            ¡Te has registro exitosamente!
-          </p>
+            <i class="bx bx-check-circle text-white text-xl"></i>
+            <span>Iniciaste sesión con éxito</span>
+          </div>
 
           <!-- Botón -->
           <button
@@ -205,11 +207,12 @@
       </div>
 
       <!-- Imagen -->
-      <div class="hidden md:block w-full md:w-1/2 h-64 md:h-full">
+      <div class="w-full md:w-1/2 h-64 md:h-full">
         <img
           id="sideImage"
           src="../img/registro/virgendelvalle.png"
-          class="w-full h-full object-cover"
+          alt="Imagen decorativa"
+          class="w-full h-full object-cover md:block object-center"
         />
       </div>
     </main>

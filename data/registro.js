@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let isEntrepreneur = false;
 
   const form = document.getElementById("registerForm");
-  const successMessage = document.getElementById("successMessage");
+  const toastSuccess = document.getElementById("toastSuccess");
   const toggleRole = document.getElementById("toggleRole");
   const formTitle = document.getElementById("formTitle");
   const formSubtext = document.getElementById("formSubtext");
@@ -82,13 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
       } else setValid(telefono);
     }
 
-    // Si todos los campos son válidos, se muestra el mensaje de éxito
+    // Si todos los campos son válidos, se muestra el toast
     if (isValid) {
-      successMessage.classList.remove("hidden");
-      form.reset();
+      toastSuccess.classList.remove("hidden");
       setTimeout(() => {
-        successMessage.classList.add("hidden");
+        toastSuccess.classList.add("hidden");
       }, 3000);
+      form.reset();
     }
   });
 

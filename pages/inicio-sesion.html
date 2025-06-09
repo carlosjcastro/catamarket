@@ -19,6 +19,20 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
     </style>
+  <style>
+  @keyframes slideIn {
+    0% {
+      transform: translate(-50%, 100%);
+    }
+    100% {
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .animate-toast {
+    animation: slideIn 0.5s ease-out;
+  }
+</style>
     <script>
       tailwind.config = {
         theme: {
@@ -93,13 +107,14 @@
             <p class="text-sm text-red-500 mt-1 hidden" id="passwordError"></p>
           </div>
 
-          <!-- Éxito -->
-          <p
-            id="successMessage"
-            class="text-green-600 text-sm text-center font-medium hidden"
+          <!-- Toast -->
+          <div
+            id="toastMessage"
+            class="hidden fixed left-1/2 transform -translate-x-1/2 bottom-5 p-4 bg-green-600 text-white text-sm rounded-2xl shadow-lg flex items-center space-x-2 transition-all duration-500 animate-toast"
           >
-            Inicio de sesión exitoso.
-          </p>
+            <i class="bx bx-check-circle text-white text-xl"></i>
+            <span>Iniciaste sesión con éxito</span>
+          </div>
 
           <!-- Botón ingresar -->
           <button
@@ -140,12 +155,12 @@
       </div>
 
       <!-- Imagen dinámica -->
-      <div class="hidden md:block w-full md:w-1/2 h-64 md:h-full">
+      <div class="w-full md:w-1/2 h-64 md:h-full">
         <img
           id="sideImage"
           src="../img/inicio-sesion/catedral.png"
           alt="Imagen decorativa"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover md:block object-center"
         />
       </div>
     </main>

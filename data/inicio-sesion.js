@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const formSubtext = document.getElementById("formSubtext");
   const emailLabel = document.getElementById("emailLabel");
   const sideImage = document.getElementById("sideImage");
-  const successMessage = document.getElementById("successMessage");
+  const toastMessage = document.getElementById("toastMessage");
 
   toggleButton.addEventListener("click", () => {
     isEntrepreneur = !isEntrepreneur;
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else setValid(password);
 
     if (isValid) {
-      successMessage.classList.remove("hidden");
+      toastMessage.classList.remove("hidden");
+      setTimeout(() => toastMessage.classList.add("hidden"), 6000);
       form.reset();
-      setTimeout(() => successMessage.classList.add("hidden"), 3000);
     }
   });
 
