@@ -10,7 +10,7 @@ const emprendedores = [
       email: "dulcecatamarca@gmail.com",
     },
     tipo: "producto",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/dulcecatamarca.png",
     redes: {
       facebook: "https://facebook.com/dulcecatamarca",
       instagram: "https://instagram.com/dulcecatamarca",
@@ -26,7 +26,7 @@ const emprendedores = [
       email: "saboresrurales@gmail.com",
     },
     tipo: "producto",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/saboresrurales.png",
     redes: {
       facebook: "https://facebook.com/saboresrurales",
       instagram: "https://instagram.com/saboresrurales",
@@ -41,7 +41,7 @@ const emprendedores = [
       email: "olivarnorte@gmail.com",
     },
     tipo: "producto",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/olivarnorte.png",
     redes: {
       facebook: "https://facebook.com/olivarnorte",
       instagram: "https://instagram.com/olivarnorte",
@@ -57,7 +57,7 @@ const emprendedores = [
       email: "arteancestral@gmail.com",
     },
     tipo: "producto",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/arteancestral.png",
     redes: {
       facebook: "https://facebook.com/arteancestral",
       instagram: "https://instagram.com/arteancestral",
@@ -73,7 +73,7 @@ const emprendedores = [
       email: "pachainfusiones@gmail.com",
     },
     tipo: "producto",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/pachainfusiones.png",
     redes: {
       facebook: "https://facebook.com/pachainfusiones",
       instagram: "https://instagram.com/pachainfusiones",
@@ -88,7 +88,7 @@ const emprendedores = [
       telefono: "+54 9 383 6789123",
       email: "tejidosinti@gmail.com",
     },
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/tejidosinti.png",
     redes: {
       instagram: "https://instagram.com/tejidosinti",
       facebook: "https://facebook.com/tejidosinti",
@@ -104,7 +104,7 @@ const emprendedores = [
       telefono: "+54 9 383 7890123",
       email: "contacto@arteceramico.com",
     },
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/arteceramico.png",
     redes: {
       instagram: "https://instagram.com/arteceramico",
       facebook: "https://facebook.com/arteceramico",
@@ -123,7 +123,7 @@ const emprendedores = [
       email: "contacto@bienestartotal.com",
     },
     tipo: "servicio",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/bienestartotal.png",
     redes: {
       facebook: "https://facebook.com/bienestartotal",
       instagram: "https://instagram.com/bienestartotal",
@@ -139,7 +139,7 @@ const emprendedores = [
       email: "hola@namastecatamarca.com",
     },
     tipo: "servicio",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/namastecatamarca.png",
     redes: {
       facebook: "https://facebook.com/namastcatamarca",
       instagram: "https://instagram.com/namastecatamarca",
@@ -155,7 +155,7 @@ const emprendedores = [
       email: "info@contabilidadsimple.com",
     },
     tipo: "servicio",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/contabilidadsimple.png",
     redes: {
       facebook: "https://facebook.com/contabilidadsimple",
       instagram: "https://instagram.com/contabilidadsimple",
@@ -171,7 +171,7 @@ const emprendedores = [
       email: "contacto@focusstudio.com",
     },
     tipo: "servicio",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/focusstudio.png",
     redes: {
       facebook: "https://facebook.com/focusstudio",
       instagram: "https://instagram.com/focusstudio",
@@ -187,7 +187,7 @@ const emprendedores = [
       email: "pixelcreativo@pixelcreativo.com",
     },
     tipo: "servicio",
-    imagen: "../img/perfil/Catamarket_Logo_3.png",
+    imagen: "../img/perfil/pixelcreativo.png",
     redes: {
       facebook: "https://facebook.com/pixelcreativo",
       instagram: "https://instagram.com/pixelcreativo",
