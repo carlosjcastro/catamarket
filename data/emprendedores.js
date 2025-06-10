@@ -7,7 +7,7 @@ const emprendedores = [
       "Empresa familiar que se dedica a la producción artesanal de mermeladas y productos regionales.",
     contacto: {
       telefono: "+54 9 383 4567890",
-      email: "correo@correo.com",
+      email: "dulcecatamarca@gmail.com",
     },
     tipo: "producto",
     imagen: "../img/perfil/Catamarket_Logo_3.png",
@@ -23,7 +23,7 @@ const emprendedores = [
       "Elaboración de pan de campo con recetas tradicionales utilizando masa madre.",
     contacto: {
       telefono: "+54 9 383 5678901",
-      email: "correo@correo.com",
+      email: "saboresrurales@gmail.com",
     },
     tipo: "producto",
     imagen: "../img/perfil/Catamarket_Logo_3.png",
@@ -38,7 +38,7 @@ const emprendedores = [
     descripcion: "Aceite de oliva virgen extra de primera prensada en frío.",
     contacto: {
       telefono: "+54 9 383 5678901",
-      email: "correo@correo.com",
+      email: "olivarnorte@gmail.com",
     },
     tipo: "producto",
     imagen: "../img/perfil/Catamarket_Logo_3.png",
@@ -54,7 +54,7 @@ const emprendedores = [
       "Emprendimiento dedicado a la creación de piezas únicas de cerámica artesanal, elaboradas a mano por artistas locales.",
     contacto: {
       telefono: "+54 9 383 5678901",
-      email: "correo@correo.com",
+      email: "arteancestral@gmail.com",
     },
     tipo: "producto",
     imagen: "../img/perfil/Catamarket_Logo_3.png",
@@ -70,7 +70,7 @@ const emprendedores = [
       "Infusiones naturales con hierbas recolectadas de forma sustentable en Catamarca.",
     contacto: {
       telefono: "+54 9 383 5678901",
-      email: "correo@correo.com",
+      email: "pachainfusiones@gmail.com",
     },
     tipo: "producto",
     imagen: "../img/perfil/Catamarket_Logo_3.png",
@@ -184,7 +184,7 @@ const emprendedores = [
       "Diseño gráfico especializado en contenido visual para redes sociales.",
     contacto: {
       telefono: "+54 9 383 5678912",
-      email: "pixel@creativo.com",
+      email: "pixelcreativo@pixelcreativo.com",
     },
     tipo: "servicio",
     imagen: "../img/perfil/Catamarket_Logo_3.png",
