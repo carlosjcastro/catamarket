@@ -12,6 +12,7 @@
     <meta name="robots" content="index, follow" />
     <!-- Estilos e íconos -->
     <link rel="stylesheet" href="../styles/scroll.css">
+    <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/equipo.css">
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
@@ -462,6 +463,15 @@
           class="w-full h-auto object-cover rounded-2xl shadow-lg border border-[#EFD8C9]"
         />
       </div>
+
+      <!-- Flecha para volver arriba de la página -->
+      <a
+        href="#top"
+        id="scrollToTopBtn"
+        class="fixed bottom-6 right-6 bg-[#c96c3a] text-white p-3 rounded-full shadow-lg hover:bg-[#7e8d48] transition duration-300"
+      >
+        <i class="bx bx-chevron-up text-2xl"></i>
+      </a>
     </main>
 
     <!-- Footer -->

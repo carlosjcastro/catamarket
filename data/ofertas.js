@@ -152,7 +152,35 @@ document.addEventListener("DOMContentLoaded", () => {
   filtroTipo.addEventListener("change", aplicarFiltros);
   ordenPrecio.addEventListener("change", aplicarFiltros);
 
-/*
+  // Contador que se va a mostrar en la sección de ofertas para destacar las mismas
+  const countDownDate = new Date("June 16, 2025 23:59:59").getTime();
+
+  const countdownFunction = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    if (distance < 0) {
+      clearInterval(countdownFunction);
+      document.getElementById("countdown").innerHTML =
+        "<span class='text-red-300 font-bold text-3xl'>¡Ofertas Finalizadas!</span>";
+      document.getElementById("oferta").style.backgroundColor = "#b91c1c";
+      document.getElementById("oferta").style.color = "#ffffff";
+      document.querySelector(".reloj-giratorio").style.display = "none";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById(
+      "countdown"
+    ).textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+  /*
   Contribuciones del equipo:
   - Carlos José Castro Galante: Implementó la lógica funcional con JavaScript, estructuró los datos simulados y organizó las funcionalidades basadas en las historias de usuario.
   - Luciano Alexis Luna Pacheco: Participó en el diseño general del sitio y la estructura visual, utilizando HTML5 y CSS3/Tailwind.

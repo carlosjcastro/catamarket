@@ -3,3 +3,18 @@
   flex-direction: column;
   height: 100%;
 }
+
+.reloj-giratorio {
+  display: inline-block;
+  animation: girar 2s ease-in-out 1 forwards;
+  animation-delay: 5s;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

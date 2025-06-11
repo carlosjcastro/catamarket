@@ -381,12 +381,25 @@
     <!-- Principal -->
     <main class="max-w-7xl mx-auto p-6">
       <h1 class="text-3xl font-bold text-center my-8">Ofertas</h1>
+      <!-- Contador para destacar las ofertas -->
+      <div
+        class="bg-[#c96c3a] text-white p-4 rounded-xl mb-6 text-center"
+        id="oferta"
+      >
+        <h3 class="text-xl font-bold">¡Solo por tiempo limitado!</h3>
+        <p class="text-lg">
+          ¡Aprovechá nuestras increíbles ofertas del
+          <span class="font-semibold">28 de mayo al 16 de junio de 2025!</span>
+        </p>
+        <div id="countdown" class="text-3xl font-semibold"></div>
+        <i class="bx bx-hourglass reloj-giratorio text-4xl"></i>
+      </div>
 
       <!-- Contenedor de filtros -->
       <div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:gap-6">
         <div class="flex-1">
           <label for="filtro-tipo" class="block text-lg font-semibold mb-2">
-            <i class='bx  bx-menu-filter'></i> Filtrar por tipo:
+            <i class="bx bx-menu-filter"></i> Filtrar por tipo:
           </label>
           <select
             id="filtro-tipo"
@@ -399,7 +412,7 @@
         </div>
         <div class="flex-1">
           <label for="orden-precio" class="block text-lg font-semibold mb-2">
-            <i class='bx  bx-menu-filter'></i> Ordenar por precio de oferta:
+            <i class="bx bx-menu-filter"></i> Ordenar por precio de oferta:
           </label>
           <select
             id="orden-precio"
@@ -412,6 +425,15 @@
         </div>
       </div>
       <div id="ofertas"></div>
+
+      <!-- Flecha para volver arriba de la página -->
+      <a
+        href="#top"
+        id="scrollToTopBtn"
+        class="fixed bottom-6 right-6 bg-[#c96c3a] text-white p-3 rounded-full shadow-lg hover:bg-[#7e8d48] transition duration-300"
+      >
+        <i class="bx bx-chevron-up text-2xl"></i>
+      </a>
     </main>
 
     <!-- Footer -->
