@@ -19,13 +19,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   main.innerHTML = "";
 
-  // Se crea un título dinámico según la categoría seleccionada
   if (categoria) {
     const titulo = document.createElement("h1");
     titulo.className = "text-3xl font-bold text-gray-800 mb-6 capitalize mt-10";
     titulo.textContent = categoria.replace(/-/g, " ").trim();
     main.appendChild(titulo);
   }
+
+  // Permite buscar servicios por nombre con un buscador de filtro
+  const buscadorContainer = document.createElement("div");
+  buscadorContainer.className = "flex justify-center mb-6";
+
+  const buscadorWrapper = document.createElement("div");
+  buscadorWrapper.className =
+    "flex items-center gap-2 border border-gray-300 rounded-2xl px-6 py-2 bg-white shadow-sm w-full max-w-sm";
+
+  const icono = document.createElement("i");
+  icono.className = "bx bx-search text-gray-500 text-xl";
+
+  const buscador = document.createElement("input");
+  buscador.type = "text";
+  buscador.placeholder = "Buscá tu servicio preferido";
+  buscador.className =
+    "flex-grow outline-none text-sm text-gray-800 bg-transparent placeholder-gray-400";
+
+  buscadorWrapper.appendChild(icono);
+  buscadorWrapper.appendChild(buscador);
+  buscadorContainer.appendChild(buscadorWrapper);
+  main.appendChild(buscadorContainer);
 
   const contenedor = document.createElement("div");
   contenedor.id = "productos";
@@ -58,62 +79,94 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  serviciosFiltrados.forEach((item) => {
-    const emprendedor = emprendedoresMap[item.emprendedorId] || {
-      nombre: "Desconocido",
-      id: "",
-    };
+  function normalizarTexto(texto) {
+    return texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  }
 
-    const card = document.createElement("div");
-    card.className =
-      "bg-[#FFF3E4] rounded-2xl border-2 border-[#4F4538] overflow-hidden flex flex-col hover:shadow-xl hover:border-[#c96c3a] hover:-translate-y-1 transition duration-300";
+  function renderizarServicios(lista) {
+    contenedor.innerHTML = "";
 
-    card.innerHTML = `
-      <img src="${item.imagen}" alt="${
-      item.titulo
-    }" class="h-48 w-full object-cover" />
-      <div class="p-4 flex flex-col flex-grow">
-        <h2 class="text-xl font-bold text-gray-900 mb-1">${item.titulo}</h2>
-        <a href="../pages/perfil-emprendedor.html?id=${
-          emprendedor.id
-        }" class="text-sm text-gray-700 mb-1 hover:underline">
-          <i class='bx bx-user'></i> ${emprendedor.nombre}
-        </a>
-        <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
-        <div class="mt-auto flex items-center justify-between">
-          <span class="text-xl font-extrabold text-[#7e8d48]">
-          ${
-            item.precioOferta
-              ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString(
-                  "es-AR",
-                  { style: "currency", currency: "ARS" }
-                )}</del>
-                ${item.precioOferta.toLocaleString("es-AR", {
-                  style: "currency",
-                  currency: "ARS",
-                })}`
-              : item.precio.toLocaleString("es-AR", {
-                  style: "currency",
-                  currency: "ARS",
-                })
-          }
-          </span>
-          <div class="flex gap-2">
-            <button class="bg-white text-gray-700 border border-gray-400 px-2 py-2 rounded-xl text-sm hover:bg-gray-100 transition duration-300 flex items-center gap-1">
-              <i class='bx bx-plus'></i>
-              Guardar
-            </button>
-            <a href="../pages/detalle.html?tipo=servicio&id=${
-              item.id
-            }" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
-              Ver Servicio
-            </a>
+    if (lista.length === 0) {
+      contenedor.innerHTML =
+        "<p class='text-center text-gray-600'>No se encontraron servicios.</p>";
+      return;
+    }
+
+    lista.forEach((item) => {
+      const emprendedor = emprendedoresMap[item.emprendedorId] || {
+        nombre: "Desconocido",
+        id: "",
+      };
+
+      const card = document.createElement("div");
+      card.className =
+        "bg-[#FFF3E4] rounded-2xl border-2 border-[#4F4538] overflow-hidden flex flex-col hover:shadow-xl hover:border-[#c96c3a] hover:-translate-y-1 transition duration-300";
+
+      card.innerHTML = `
+        <img src="${item.imagen}" alt="${
+        item.titulo
+      }" class="h-48 w-full object-cover" />
+        <div class="p-4 flex flex-col flex-grow">
+          <h2 class="text-xl font-bold text-gray-900 mb-1">${item.titulo}</h2>
+          <a href="../pages/perfil-emprendedor.html?id=${
+            emprendedor.id
+          }" class="text-sm text-gray-700 mb-1 hover:underline">
+            <i class='bx bx-user'></i> ${emprendedor.nombre}
+          </a>
+          <p class="text-sm text-gray-700 mb-3">${item.descripcion}</p>
+          <div class="mt-auto flex items-center justify-between">
+            <span class="text-xl font-extrabold text-[#7e8d48]">
+              ${
+                item.precioOferta
+                  ? `<del class="text-sm font-normal text-gray-500 mr-2">${item.precio.toLocaleString(
+                      "es-AR",
+                      {
+                        style: "currency",
+                        currency: "ARS",
+                      }
+                    )}</del>
+                    ${item.precioOferta.toLocaleString("es-AR", {
+                      style: "currency",
+                      currency: "ARS",
+                    })}`
+                  : item.precio.toLocaleString("es-AR", {
+                      style: "currency",
+                      currency: "ARS",
+                    })
+              }
+            </span>
+            <div class="flex gap-2">
+              <button class="bg-white text-gray-700 border border-gray-400 px-2 py-2 rounded-xl text-sm hover:bg-gray-100 transition duration-300 flex items-center gap-1">
+                <i class='bx bx-plus'></i>
+                Guardar
+              </button>
+              <a href="../pages/detalle.html?tipo=servicio&id=${
+                item.id
+              }" class="bg-[#7e8d48] text-white px-4 py-2 rounded-xl text-sm hover:bg-[#657a3b] transition duration-300">
+                Ver Servicio
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    `;
+      `;
 
-    contenedor.appendChild(card);
+      contenedor.appendChild(card);
+    });
+  }
+
+  renderizarServicios(serviciosFiltrados);
+
+  buscador.addEventListener("input", (e) => {
+    const texto = normalizarTexto(e.target.value);
+    const filtrados = serviciosFiltrados.filter(
+      (servicio) =>
+        normalizarTexto(servicio.titulo).includes(texto) ||
+        normalizarTexto(servicio.descripcion).includes(texto)
+    );
+    renderizarServicios(filtrados);
   });
 });
 
