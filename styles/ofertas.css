@@ -4,17 +4,19 @@
   height: 100%;
 }
 
-.reloj-giratorio {
-  display: inline-block;
-  animation: girar 2s ease-in-out 1 forwards;
-  animation-delay: 5s;
-}
-
-@keyframes girar {
+@keyframes girar-cada-5s {
   0% {
     transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(360deg);
   }
   100% {
     transform: rotate(360deg);
   }
+}
+
+.reloj-giratorio {
+  display: inline-block;
+  animation: girar-cada-5s 5s ease-in-out infinite;
 }
