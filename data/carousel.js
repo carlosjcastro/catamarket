@@ -15,7 +15,12 @@ const indicators = document.querySelectorAll(".indicator");
 
 function moveCarousel() {
   const offset = -(currentIndex * 100);
-  carouselInner.style.transform = `translateX(${offset}%)`;
+  
+  if (carouselInner.style.transform !== `translateX(${offset}%)`) {
+    carouselInner.style.transition = "transform 0.5s ease";
+    carouselInner.style.transform = `translateX(${offset}%)`;
+  }
+
   updateIndicators();
 }
 
@@ -44,7 +49,17 @@ function nextSlide() {
   moveCarousel();
 }
 
-autoSlide = setInterval(nextSlide, 3000);
+let lastTime = 0;
+function autoSlideFunc() {
+  const now = performance.now();
+  if (now - lastTime >= 3000) {
+    nextSlide();
+    lastTime = now;
+  }
+  requestAnimationFrame(autoSlideFunc);
+}
+
+requestAnimationFrame(autoSlideFunc);
 
 moveCarousel();
 
