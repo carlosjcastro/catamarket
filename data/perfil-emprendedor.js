@@ -9,7 +9,7 @@ if (emprendedor) {
     <div class="flex flex-col md:flex-row items-start gap-6">
       <!-- Imagen del emprendedor -->
       <div class="w-full md:w-1/3">
-        <img src="${emprendedor.imagen || "default-image.jpg"}" alt="Foto de ${
+        <img src="${emprendedor.imagen || "default-image.jpg"}" loading="lazy" alt="Foto de ${
     emprendedor.nombre
   }" class="rounded-lg w-full object-cover" />
       </div>

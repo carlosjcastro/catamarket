@@ -242,7 +242,7 @@ const mostrarTarjetas = (tipoSeleccionado) => {
         ${etiqueta} 
         <img src="${
           emprendedor.imagen || "../img/logo/Catamarket_Logo_2.png"
-        }" alt="${
+        }" loading="lazy" alt="${
         emprendedor.nombre
       }" class="w-32 h-32 object-cover rounded-full mb-4 card-img">
         <div class="card-content">

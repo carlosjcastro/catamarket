@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.innerHTML = `
       <div class="relative">
         ${ofertaTag}
-        <img src="${item.imagen}" alt="${
+        <img src="${item.imagen}" loading="lazy" alt="${
       item.titulo
     }" class="h-48 w-full object-cover" />
       </div>

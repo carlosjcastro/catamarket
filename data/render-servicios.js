@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "bg-[#FFF3E4] rounded-2xl border-2 border-[#4F4538] overflow-hidden flex flex-col hover:shadow-xl hover:border-[#c96c3a] hover:-translate-y-1 transition duration-300";
 
       card.innerHTML = `
-        <img src="${item.imagen}" alt="${
+        <img src="${item.imagen}" loading="lazy" alt="${
         item.titulo
       }" class="h-48 w-full object-cover" />
         <div class="p-4 flex flex-col flex-grow">
