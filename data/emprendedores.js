@@ -240,7 +240,9 @@ const mostrarTarjetas = (tipoSeleccionado) => {
       // Se crea el contenido de la tarjeta
       tarjeta.innerHTML = `
         ${etiqueta} 
-        <img src="${emprendedor.imagen || "default-image.jpg"}" alt="${
+        <img src="${
+          emprendedor.imagen || "../img/logo/Catamarket_Logo_2.png"
+        }" alt="${
         emprendedor.nombre
       }" class="w-32 h-32 object-cover rounded-full mb-4 card-img">
         <div class="card-content">

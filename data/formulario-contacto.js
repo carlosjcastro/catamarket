@@ -70,21 +70,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Función para mostrar un mensaje de error
-function showError(field, message) {
-  const errorElement = document.getElementById(`${field}Error`);
-  errorElement.textContent = message;
-  errorElement.classList.remove("hidden");
-  
-  const inputElement = document.getElementById(field);
-  inputElement.classList.add("border-red-500");
-  inputElement.classList.remove("border-green-500");
-  
-  inputElement.classList.add("shake");
+  function showError(field, message) {
+    const errorElement = document.getElementById(`${field}Error`);
+    errorElement.textContent = message;
+    errorElement.classList.remove("hidden");
 
-  setTimeout(() => {
-    inputElement.classList.remove("shake");
-  }, 500);
-}
+    const inputElement = document.getElementById(field);
+    inputElement.classList.add("border-red-500");
+    inputElement.classList.remove("border-green-500");
+
+    inputElement.classList.add("shake");
+
+    setTimeout(() => {
+      inputElement.classList.remove("shake");
+    }, 500);
+  }
 
   // Función para marcar un campo como válido
   function setValid(input) {

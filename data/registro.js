@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const specialCharCriteria = document.getElementById("specialCharCriteria");
 
   // Esto permite validar la contraseña
-  passwordInput.addEventListener("input", function() {
+  passwordInput.addEventListener("input", function () {
     const passwordValue = passwordInput.value;
 
     if (passwordValue.trim()) {
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Permite mostrar u ocultar los criterios de la contraseña con un icono y texto
   function toggleCriteria(element, isValid) {
-    const icon = element.querySelector('i');
-    const text = element.querySelector('span');
+    const icon = element.querySelector("i");
+    const text = element.querySelector("span");
     const isChecked = element.classList.contains("line-through");
 
     if (isValid) {
@@ -39,22 +39,22 @@ document.addEventListener("DOMContentLoaded", () => {
           icon.classList.remove("bx-x-circle");
           icon.classList.add("bx-check");
         }
-        
+
         element.classList.remove("text-red-500");
         element.classList.add("text-green-500");
-        
+
         element.classList.add("line-through");
       }
     } else {
       if (isChecked) {
         element.classList.remove("line-through");
       }
-      
+
       if (!icon.classList.contains("bx-x-circle")) {
         icon.classList.remove("bx-check");
         icon.classList.add("bx-x-circle");
       }
-      
+
       element.classList.remove("text-green-500");
       element.classList.add("text-red-500");
     }
@@ -192,7 +192,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return re.test(email);
   }
 });
-
 
 /*
   Contribuciones del equipo:

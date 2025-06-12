@@ -15,14 +15,16 @@ if (item) {
       ? item.imagenes
           .map(
             (img) =>
-              `<img src="${img}" alt="${item.titulo}" class="w-full h-60 object-cover rounded-lg border">`
+              `<img src="${img}" alt="${item.titulo}" class="w-full h-60 object-cover rounded-lg border cursor-pointer imagen-modal" data-src="${img}">`
           )
           .join("")
       : `<img src="${
-          item.imagen || "https://via.placeholder.com/300x200"
+          item.imagen || ""
         }" alt="${
           item.titulo
-        }" class="w-full h-60 object-cover rounded-lg border">`;
+        }" class="w-full h-60 object-cover rounded-lg border cursor-pointer imagen-modal" data-src="${
+          item.imagen || ""
+        }">`;
 
   const tieneOferta =
     typeof item.precioOferta === "number" && item.precioOferta > 0;
@@ -96,8 +98,8 @@ if (item) {
       <aside class="w-full lg:w-1/3 bg-[#FFF3E4] border border-[#4F4538] shadow-md p-6 rounded-2xl h-fit">
         <h2 class="text-lg font-semibold mb-2 text-[#4F4538]">Emprendedor</h2>
         <img src="${emprendedor.imagen || "default-image.jpg"}" alt="Foto de ${
-        emprendedor.nombre
-      }" class="w-24 h-24 object-cover rounded-full mb-4 border">
+    emprendedor.nombre
+  }" class="w-24 h-24 object-cover rounded-full mb-4 border">
             <p class="text-gray-800 font-medium text-xl mb-2"><i class='bx bx-user'></i> ${
               emprendedor.nombre
             }</p>
@@ -109,7 +111,45 @@ if (item) {
       </a>
       </aside>
     </div>
+
+    <!-- Modal -->
+    <div id="imagen-modal" class="p-8 fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+      <div class="relative">
+        <button id="cerrar-modal" class="absolute top-2 right-2 text-white text-2xl"><i class='bx bx-x hover:text-[#c96c3a] transition transition-300'></i></button>
+        <img id="imagen-modal-src" src="" alt="Imagen ampliada" class="max-w-full max-h-[90vh] rounded-2xl">
+      </div>
+    </div>
   `;
+
+  setTimeout(() => {
+    const imagenes = document.querySelectorAll(".imagen-modal");
+    const modal = document.getElementById("imagen-modal");
+    const modalImg = document.getElementById("imagen-modal-src");
+    const cerrarBtn = document.getElementById("cerrar-modal");
+
+    imagenes.forEach((img) => {
+      img.addEventListener("click", () => {
+        const src = img.getAttribute("data-src");
+        modalImg.src = src;
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      });
+    });
+
+    cerrarBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+      modalImg.src = "";
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+        modalImg.src = "";
+      }
+    });
+  }, 0);
 } else {
   document.getElementById(
     "detalle"
