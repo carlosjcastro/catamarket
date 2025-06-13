@@ -153,7 +153,11 @@ document.addEventListener("DOMContentLoaded", () => {
   ordenPrecio.addEventListener("change", aplicarFiltros);
 
   // Contador que se va a mostrar en la sección de ofertas para destacar las mismas
-  const countDownDate = new Date("June 16, 2025 23:59:59").getTime();
+  const countDownDate = new Date("June 16, 2025 23:59:59");
+  const argentinaTime = new Intl.DateTimeFormat("es-AR", {
+    timeZone: "America/Argentina/Buenos_Aires",
+    hour12: false,
+  }).format(countDownDate);
 
   const countdownFunction = setInterval(() => {
     const now = new Date().getTime();
