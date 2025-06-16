@@ -119,6 +119,40 @@ const productos = [
     emprendedorId: "arte-ceramico",
     categoria: "decoracion",
   },
+  {
+    id: 8,
+    tipo: "producto",
+    titulo: "Dulce de membrillo artesanal",
+    precio: 1400,
+    descripcion:
+      "Dulce tradicional de membrillo elaborado de forma artesanal en Catamarca.",
+    imagen: "../img/productos/membrillo2.webp",
+    imagenes: ["../img/productos/membrillo.webp"],
+    caracteristicas: [
+      "Membrillos seleccionados de producción local",
+      "Sin aditivos químicos",
+      "Presentación en bloque de 300g",
+    ],
+    emprendedorId: "dulce-catamarca",
+    categoria: "gastronomia",
+  },
+  {
+    id: 9,
+    tipo: "producto",
+    titulo: "Conserva de tomates al natural",
+    precio: 1600,
+    descripcion:
+      "Tomates seleccionados conservados en frascos esterilizados, listos para cocinar.",
+    imagen: "../img/productos/tomates.jpg",
+    imagenes: ["../img/productos/tomates2.webp"],
+    caracteristicas: [
+      "Tomates orgánicos",
+      "Sin conservantes ni colorantes",
+      "Frasco de 400g",
+    ],
+    emprendedorId: "dulce-catamarca",
+    categoria: "gastronomia",
+  },
 ];
 
 const contenedorProductos = document.getElementById("productos");
