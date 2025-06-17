@@ -9,13 +9,22 @@ carouselItems.forEach((_, index) => {
   btn.className = "indicator w-3 h-3 rounded-full bg-gray-400";
   btn.dataset.index = index;
   indicatorsContainer.appendChild(btn);
+
+  btn.setAttribute("aria-label", `Ir a la imagen ${index + 1} del carrusel`);
+  if (index === currentIndex) {
+    btn.setAttribute("aria-current", "true");
+  } else {
+    btn.setAttribute("aria-current", "false");
+  }
+
+  indicatorsContainer.appendChild(btn);
 });
 
 const indicators = document.querySelectorAll(".indicator");
 
 function moveCarousel() {
   const offset = -(currentIndex * 100);
-  
+
   if (carouselInner.style.transform !== `translateX(${offset}%)`) {
     carouselInner.style.transition = "transform 0.5s ease";
     carouselInner.style.transform = `translateX(${offset}%)`;
