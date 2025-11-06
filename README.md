@@ -5,7 +5,7 @@
 Carrera: Tecnicatura Universitaria en Diseño de Software — Universidad Nacional de Catamarca  
 
 ## Descripción general  
-CataMarket es una aplicación web orientada a emprendedores locales de Catamarca, que permite explorar productos y servicios agrupados por categorías, consultar precios y descubrir ofertas. El proyecto funciona como una SPA simulada, sin backend real; todos los datos e interacciones están preparados para demostración.
+Catamarket es una aplicación web orientada a emprendedores locales de Catamarca, que permite explorar productos y servicios agrupados por categorías, consultar precios y descubrir ofertas. El proyecto funciona como una SPA simulada, sin backend real; todos los datos e interacciones están preparados para demostración.
 
 ## Funcionalidades clave  
 - Navegación por categorías de productos (Artesanías, Gastronomía, Indumentaria, Decoración, Servicios).  
@@ -30,23 +30,18 @@ CataMarket es una aplicación web orientada a emprendedores locales de Catamarca
 - **Herramientas de desarrollo**: Git, GitHub, Visual Studio Code.  
 
 ## Enfoque del proyecto  
-CataMarket busca ofrecer una experiencia intuitiva para que los usuarios puedan explorar productos y emprendedores locales de manera clara y rápida, destacando:  
+Catamarket busca ofrecer una experiencia intuitiva para que los usuarios puedan explorar productos y emprendedores locales de manera clara y rápida, destacando:  
 - Acceso simple a categorías y ofertas.  
 - Filtrado eficiente por precio y tipo de producto o emprendedor.  
 - Interfaz visual limpia y responsiva, sin necesidad de registro ni backend.
 
 ## Relación académica (Programación I)
-
-- Este proyecto refleja competencias clave abordadas en Programación I, tales como:
+Este proyecto refleja competencias clave abordadas en Programación I, tales como:
 
 - Fundamentos de la lógica de programación y resolución de problemas.
-
 - Uso de estructuras de control (condicionales, bucles) y estructuras de datos (arrays, objetos, JSON).
-
 - Modularización y reutilización de código mediante funciones.
-
 - Aplicación del paradigma orientado a eventos para interacciones dinámicas con el usuario.
-
 - Comprensión y manipulación de datos en memoria sin necesidad de base de datos externa.
 
 El proyecto demuestra la implementación práctica de los conceptos esenciales de Programación I, validando competencias tanto conceptuales como procedimentales adquiridas durante la formación académica.
